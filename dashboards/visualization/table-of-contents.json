@@ -1,0 +1,10 @@
+{
+  "title": "Table of Contents",
+  "visState": "{\"aggs\":[],\"listeners\":{},\"params\":{\"markdown\":\"# ROCK NSM\\n## Dashboards:  \\n#### [Log Types](/app/kibana#/dashboard/log-types)\\n#### [CONN](/app/kibana#/dashboard/conn)\\n#### [HTTP](/app/kibana#/dashboard/http)\\n#### [DNS](/app/kibana#/dashboard/dns)\"},\"title\":\"Table of Contents\",\"type\":\"markdown\"}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[]}"
+  }
+}
