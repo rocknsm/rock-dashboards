@@ -1,6 +1,6 @@
 {
   "title": "Table of Contents",
-  "visState": "{\"aggs\":[],\"listeners\":{},\"params\":{\"markdown\":\"# ROCK NSM\\n## Dashboards:  \\n#### [Log Types](/app/kibana#/dashboard/log-types)\\n#### [CONN](/app/kibana#/dashboard/conn)\\n#### [HTTP](/app/kibana#/dashboard/http)\\n#### [DNS](/app/kibana#/dashboard/dns)\\n#### [SURICATA](/app/kibana#/dashboard/suricata)\\n  \\n  \\n Contribute your own dashboards [here](https://github.com/rocknsm/rock-dashboards)\"},\"title\":\"Table of Contents\",\"type\":\"markdown\"}",
+  "visState": "{\"title\":\"Table of Contents\",\"type\":\"markdown\",\"params\":{\"markdown\":\"# ROCK NSM\\n----\\n### Hunt Dashboards:  \\n#### [OVERVIEW](/app/kibana#/dashboard/overview)  \\n#### [FLOWS](/app/kibana#/dashboard/flows)  \\n#### [LOG TYPES](/app/kibana#/dashboard/log-types)\\n#### [CONN](/app/kibana#/dashboard/conn)\\n#### [HTTP](/app/kibana#/dashboard/http)  \\n#### [SSL](/app/kibana#/dashboard/ssl)  \\n#### [DNS](/app/kibana#/dashboard/dns)\\n#### [FILES](/app/kibana#/dashboard/files)  \\n#### [NOTICE](/app/kibana#/dashboard/notice)  \\n#### [SURICATA](/app/kibana#/dashboard/suricata)\\n----\\n### Sensor Health Dashboards:  \\n#### [STATS](/app/kibana#/dashboard/stats)  \\n  \\n  \\n----\\nContribute your own dashboards [here](https://github.com/rocknsm/rock-dashboards)\"},\"aggs\":[],\"listeners\":{}}",
   "uiStateJSON": "{}",
   "description": "",
   "version": 1,
