@@ -1,0 +1,26 @@
+{
+  "title": "bro_conn",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "conn.id_orig_h",
+    "conn.id_orig_p",
+    "conn.id_resp_h",
+    "conn.id_resp_p",
+    "conn.service",
+    "conn.duration",
+    "conn.orig_pkts",
+    "conn.orig_bytes",
+    "conn.resp_pkts",
+    "conn.resp_bytes",
+    "Docket PCAP"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: conn\"},\"filter\":[]}"
+  }
+}

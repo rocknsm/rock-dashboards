@@ -1,0 +1,13 @@
+{
+  "title": "STATS",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"id\":\"stat-files-seen\",\"type\":\"visualization\",\"panelIndex\":1,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":4},{\"id\":\"stat-packet-lag\",\"type\":\"visualization\",\"panelIndex\":2,\"size_x\":4,\"size_y\":3,\"col\":9,\"row\":1},{\"id\":\"stats-average-tcp-conn\",\"type\":\"visualization\",\"panelIndex\":3,\"size_x\":4,\"size_y\":3,\"col\":5,\"row\":4},{\"id\":\"stats-average-udp-conn\",\"type\":\"visualization\",\"panelIndex\":4,\"size_x\":4,\"size_y\":3,\"col\":9,\"row\":4},{\"id\":\"stats-bytes-received\",\"type\":\"visualization\",\"panelIndex\":5,\"size_x\":12,\"size_y\":3,\"col\":1,\"row\":7},{\"id\":\"stats-max-packets-dropped\",\"type\":\"visualization\",\"panelIndex\":6,\"size_x\":4,\"size_y\":3,\"col\":5,\"row\":1},{\"id\":\"stats-packets-dropped\",\"type\":\"visualization\",\"panelIndex\":7,\"size_x\":4,\"size_y\":3,\"col\":1,\"row\":1}]",
+  "optionsJSON": "{\"darkTheme\":false}",
+  "uiStateJSON": "{}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+  }
+}

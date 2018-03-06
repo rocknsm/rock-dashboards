@@ -1,0 +1,22 @@
+{
+  "title": "bro_dns_nxdomain",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "dns.id_orig_h",
+    "dns.id_resp_h",
+    "dns.qtype_name",
+    "dns.query",
+    "dns.rcode_name",
+    "dns.answers",
+    "Docket PCAP"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: dns AND dns.rcode_name:NXDOMAIN\"},\"filter\":[]}"
+  }
+}

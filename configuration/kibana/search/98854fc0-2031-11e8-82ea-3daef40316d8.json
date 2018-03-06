@@ -1,0 +1,26 @@
+{
+  "title": "suricata_flow",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "flow.end",
+    "src_ip",
+    "dest_ip",
+    "src_port",
+    "dest_port",
+    "proto",
+    "flow.pkts_toserver",
+    "flow.bytes_toserver",
+    "flow.pkts_toclient",
+    "flow.bytes_toclient",
+    "app_proto"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"b6c2fb00-1fea-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event_type: flow\"},\"filter\":[]}"
+  }
+}

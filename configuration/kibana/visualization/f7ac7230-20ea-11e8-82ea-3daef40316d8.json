@@ -1,0 +1,10 @@
+{
+  "title": "selection_sensor_filter",
+  "visState": "{\"title\":\"selection_sensor_filter\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1520305361432\",\"indexPattern\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"fieldName\":\"@meta.system\",\"label\":\"Sensor\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"size\":10,\"order\":\"desc\"}}],\"updateFiltersOnChange\":false,\"useTimeFilter\":false},\"aggs\":[]}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{}"
+  }
+}
