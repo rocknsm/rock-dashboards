@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 KIBANA_URL=http://127.0.0.1:5601
-KIBANA_VERSION=$(curl -I ${KIBANA_URL} | awk '/kbn-version/ { print $2 }')
+KIBANA_VERSION=$(curl -sI ${KIBANA_URL} | awk '/kbn-version/ { print $2 }')
 
 for item in index-pattern search visualization dashboard; do
     cd ${item} 2>/dev/null || continue
@@ -13,7 +13,7 @@ for item in index-pattern search visualization dashboard; do
             curl -s -XPOST \
                 -H"kbn-xsrf: true" \
                 -H"Content-Type: application/json" \
-                "${KIBANA_URL}/api/saved_objects/${item}" -d"{\"attributes\": $(cat ${id}.json)}" > /dev/null
+                "${KIBANA_URL}/api/saved_objects/${item}/${id}" -d"{\"attributes\": $(cat ${id}.json)}" > /dev/null
         else
             # object already exists, apply update
             echo "Overwriting ${item} named ${id}" > /dev/stderr
