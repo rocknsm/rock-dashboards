@@ -1,5 +1,5 @@
 {
-  "title": "bro_conn",
+  "title": "Bro - Connections",
   "description": "",
   "hits": 0,
   "columns": [
@@ -8,12 +8,12 @@
     "conn.id_resp_h",
     "conn.id_resp_p",
     "conn.service",
+    "Docket PCAP",
     "conn.duration",
     "conn.orig_pkts",
     "conn.orig_bytes",
     "conn.resp_pkts",
-    "conn.resp_bytes",
-    "Docket PCAP"
+    "conn.resp_bytes"
   ],
   "sort": [
     "@timestamp",
