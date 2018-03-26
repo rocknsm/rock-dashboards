@@ -1,92 +1,97 @@
 {
-  "order": 0,
-  "template": "suricata-*",
-  "settings": {
-    "analysis": {
-      "analyzer": {
-        "on_dots": {
-          "filter": "lowercase",
-          "type": "custom",
-          "tokenizer": "dots_tokenizer"
-        }
-      },
-      "tokenizer": {
-        "dots_tokenizer": {
-          "type": "pattern",
-          "pattern": "\\."
+  "suricata_index": {
+    "order": 0,
+    "version": 1,
+    "index_patterns": [
+      "suricata-*"
+    ],
+    "settings": {
+      "index": {
+        "analysis": {
+          "analyzer": {
+            "on_dots": {
+              "filter": "lowercase",
+              "type": "custom",
+              "tokenizer": "dots_tokenizer"
+            }
+          },
+          "tokenizer": {
+            "dots_tokenizer": {
+              "pattern": "\\.",
+              "type": "pattern"
+            }
+          }
         }
       }
-    }
-  },
-  "mappings": {
-    "_default_": {
-      "dynamic_templates": [
-        {
-          "ip_addresses": {
-            "match_mapping_type": "string",
-            "match": "*_ip",
-            "mapping": {
-              "type": "ip"
-            }
-          }
-        },
-        {
-          "strings_as_keywords": {
-            "match_mapping_type": "string",
-            "match": "*",
-            "mapping": {
-              "type": "keyword"
-            }
-          }
-        }
-      ]
     },
-    "_doc": {
-      "properties": {
-        "@timestamp": {
-          "type": "date"
-        },
-        "@version": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
+    "mappings": {
+      "_doc": {
+	      "dynamic_templates": [
+          {
+            "ip_addresses": {
+              "match_mapping_type": "string",
+              "match": "*_ip",
+              "mapping": {
+                "type": "ip"
+              }
+            }
+          },
+          {
+            "strings_as_keywords": {
+              "match_mapping_type": "string",
+              "match": "*",
+              "mapping": {
+                "type": "keyword"
+              }
             }
           }
-        },
-        "flow": {
-          "properties": {
-            "age": {
-              "type": "long"
-            },
-            "alerted": {
-              "type": "boolean"
-            },
-            "bytes_toclient": {
-              "type": "long"
-            },
-            "bytes_toserver": {
-              "type": "long"
-            },
-            "end": {
-              "type": "date"
-            },
-            "pkts_toclient": {
-              "type": "long"
-            },
-            "pkts_toserver": {
-              "type": "long"
-            },
-            "start": {
-              "type": "date"
+        ],
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "@version": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          }
-        },
-        "flow_id": {
-          "type": "long"
-        },
-        "http": {
+          },
+          "flow": {
+            "properties": {
+              "age": {
+                "type": "long"
+              },
+              "alerted": {
+                "type": "boolean"
+              },
+              "bytes_toclient": {
+                "type": "long"
+              },
+              "bytes_toserver": {
+                "type": "long"
+              },
+              "end": {
+                "type": "date"
+              },
+              "pkts_toclient": {
+                "type": "long"
+              },
+              "pkts_toserver": {
+                "type": "long"
+              },
+              "start": {
+                "type": "date"
+              }
+            }
+          },
+          "flow_id": {
+            "type": "long"
+          },
+          "http": {
+            "properties": {
             "http_user_agent": {
               "type": "text",
               "fields": {
@@ -96,8 +101,8 @@
                 }
               }
             }
-          }
-        },
+}
+          },
         "icmp_code": {
           "type": "long"
         },
@@ -553,7 +558,7 @@
             },
             "syn": {
               "type": "boolean"
-            },
+            }
           }
         },
         "timestamp": {
@@ -568,4 +573,5 @@
       }
     }
   }
+}
 }

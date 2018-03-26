@@ -31,11 +31,13 @@ for item in *.json; do
 
   if [ "${version}" -gt "${existing_version}" ]; then
     echo "Installing index mapping template: ${name} version ${version}" >/dev/stderr
-    response=$(curl -s -XPUT "${ES_URL}/_template/${name}" -H "Content-Type: application/json" --data "$(cat ${item} | jq ".${name}")" | jq -r ".acknowledged")
-    if [ "${response}" == "true" ]; then
+    response=$(curl -s -XPUT "${ES_URL}/_template/${name}" -H "Content-Type: application/json" --data "$(cat ${item} | jq ".${name}")")
+    result=$(echo ${response} | jq -r '.acknowledged')
+    if [ "${result}" == "true" ]; then
       changed=$[$changed + 1]
     else
       failed=$[$failed + 1]
+      echo "Failed putting ${name} version ${version}: \n ${response}" > /dev/null
     fi
   else
     ok=$[$ok + 1]
