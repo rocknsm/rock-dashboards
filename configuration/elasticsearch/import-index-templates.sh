@@ -1,8 +1,7 @@
 #!/bin/bash 
 
 _URL=$1
-ES_URL=${URL:='http://127.0.0.1:9200'}
-
+ES_URL=${_URL:='http://127.0.0.1:9200'}
 
 function is_integer() {
     [ "$1" -eq "$1" ] > /dev/null 2>&1

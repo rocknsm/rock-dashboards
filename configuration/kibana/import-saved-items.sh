@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-KIBANA_URL=http://127.0.0.1:5601
+_URL=$1
+KIBANA_URL=${_URL:=http://127.0.0.1:5601}
 KIBANA_VERSION=$(curl -sI ${KIBANA_URL} | awk '/kbn-version/ { print $2 }')
 
 for item in index-pattern search visualization dashboard; do
