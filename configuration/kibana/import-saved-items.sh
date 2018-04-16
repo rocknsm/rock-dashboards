@@ -27,3 +27,10 @@ for item in index-pattern search visualization dashboard; do
     cd ..
 done
 
+# Set default index
+defaultIndex=$(jq -r '.value' index-pattern/default.json)
+
+echo "Setting defaultIndex to ${defaultIndex}" > /dev/stderr
+curl -s -XPOST -H"kbn-xsrf: true" -H"Content-Type: application/json" \
+	"${KIBANA_URL}/api/kibana/settings/defaultIndex" -d"{\"value\": \"${defaultIndex}\"}"
+
