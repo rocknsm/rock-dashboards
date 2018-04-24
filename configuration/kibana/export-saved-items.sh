@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-KIBANA_URL=http://127.0.0.1:5601
+_URL=$1
+KIBANA_URL=${_URL:=http://127.0.0.1:5601}
 
 for item in index-pattern search visualization dashboard; do
     mkdir -p ${item}
