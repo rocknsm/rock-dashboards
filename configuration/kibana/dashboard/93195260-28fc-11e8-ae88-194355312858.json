@@ -1,0 +1,12 @@
+{
+  "title": "CONN - Counts",
+  "hits": 0,
+  "description": "Bro Connection Data by Count of Events",
+  "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"1\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"f9b74be0-27c5-11e8-ae88-194355312858\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"2\",\"w\":6,\"x\":0,\"y\":3},\"id\":\"ce69d3d0-27c6-11e8-ae88-194355312858\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"3\",\"w\":6,\"x\":6,\"y\":3},\"id\":\"e58fbb10-27c6-11e8-ae88-194355312858\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"4\",\"w\":6,\"x\":6,\"y\":6},\"id\":\"86e9e540-27cb-11e8-ae88-194355312858\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"columns\":[\"conn.id_orig_h\",\"conn.id_orig_p\",\"conn.id_resp_h\",\"conn.id_resp_p\",\"conn.service\",\"Docket PCAP\",\"conn.duration\",\"conn.orig_pkts\",\"conn.orig_bytes\",\"conn.resp_pkts\",\"conn.resp_bytes\"],\"gridData\":{\"h\":3,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":9},\"id\":\"009f6e00-2024-11e8-82ea-3daef40316d8\",\"panelIndex\":\"5\",\"type\":\"search\",\"version\":\"6.2.2\"},{\"gridData\":{\"w\":6,\"h\":3,\"x\":0,\"y\":6,\"i\":\"6\"},\"version\":\"6.2.2\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"id\":\"8b98bcc0-27ca-11e8-ae88-194355312858\"}]",
+  "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+  }
+}

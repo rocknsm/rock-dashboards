@@ -1,0 +1,26 @@
+{
+  "title": "Bro - Stats",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "stats.peer",
+    "stats.mem",
+    "stats.events_proc",
+    "stats.bytes_recv",
+    "stats.tcp_conns",
+    "stats.udp_conns",
+    "stats.icmp_conns",
+    "stats.files",
+    "stats.pkts_link",
+    "stats.pkts_proc",
+    "stats.pkts_dropped"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"@meta.stream: stats\",\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

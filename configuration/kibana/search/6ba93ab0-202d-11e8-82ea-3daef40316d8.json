@@ -1,0 +1,24 @@
+{
+  "title": "Bro - Files - Common Exploit Types",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "@meta.related_ids",
+    "files.mime_type",
+    "files.source",
+    "files.tx_hosts",
+    "files.rx_hosts",
+    "files.total_bytes",
+    "files.analyzers",
+    "files.md5",
+    "files.sha1"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: files AND files.mime_type: ( \\\"application/java-archive\\\" OR  \\\"application/x-java-applet\\\" OR  \\\"application/x-java-jnlp-file\\\" OR \\\"application/x-dosexec\\\" OR  \\\"application/msword\\\" OR \\\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\\\" OR \\\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\\\" OR \\\"application/vnd.openxmlformats-officedocument.presentationml.presentation\\\" OR \\\"application/pdf\\\"  )\"},\"filter\":[]}"
+  }
+}

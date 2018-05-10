@@ -1,0 +1,11 @@
+{
+  "title": "STATS - Decoded Bytes",
+  "visState": "{\"title\":\"STATS - Decoded Bytes\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.decoder.bytes\",\"customLabel\":\"Total Decoded Bytes\"}}]}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "d2357e20-2900-11e8-ae88-194355312858",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+  }
+}
