@@ -1,0 +1,12 @@
+{
+  "title": "FILES",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"gridData\":{\"w\":6,\"h\":3,\"x\":0,\"y\":0,\"i\":\"1\"},\"version\":\"6.2.3\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"id\":\"13caaac0-27f5-11e8-ae88-194355312858\"},{\"gridData\":{\"w\":6,\"h\":3,\"x\":6,\"y\":0,\"i\":\"2\"},\"version\":\"6.2.3\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"id\":\"4cc99430-27f5-11e8-ae88-194355312858\"}]",
+  "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+  }
+}

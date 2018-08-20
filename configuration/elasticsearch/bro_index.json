@@ -1,0 +1,375 @@
+{
+  "bro_index": {
+    "order": 0,
+    "version": 1,
+    "index_patterns": [
+      "bro-*"
+    ],
+    "settings": {
+      "index": {
+        "analysis": {
+          "analyzer": {
+            "on_dots": {
+              "filter": "lowercase",
+              "type": "custom",
+              "tokenizer": "dots_tokenizer"
+            }
+          },
+          "tokenizer": {
+            "dots_tokenizer": {
+              "pattern": "\\.",
+              "type": "pattern"
+            }
+          }
+        }
+      }
+    },
+    "mappings": {
+      "_doc": {
+        "properties": {
+          "files": {
+            "properties": {
+              "tx_hosts": {
+                "type": "ip"
+              },
+              "rx_hosts": {
+                "type": "ip"
+              }
+            }
+          },
+          "notice": {
+            "properties": {
+              "src": {
+                "type": "ip"
+              },
+              "id_resp_h": {
+                "type": "ip"
+              },
+              "id_orig_h": {
+                "type": "ip"
+              },
+              "dst": {
+                "type": "ip"
+              },
+              "msg": {
+                "fields": {
+                  "keyword": {
+                    "ignore_above": 256,
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "id_resp_p": {
+                "type": "long"
+              },
+              "id_orig_p": {
+                "type": "long"
+              }
+            }
+          },
+          "sip": {
+            "properties": {
+              "user_agent": {
+                "fields": {
+                  "keyword": {
+                    "ignore_above": 256,
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          },
+          "http": {
+            "properties": {
+              "host": {
+                "type": "keyword",
+                "copy_to": "domain.name"
+              },
+              "user_agent": {
+                "fields": {
+                  "keyword": {
+                    "ignore_above": 256,
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          },
+          "ssl": {
+            "properties": {
+              "server_name": {
+                "type": "keyword",
+                "copy_to": "domain.name"
+              }
+            }
+          },
+          "smtp": {
+            "properties": {
+              "user_agent": {
+                "fields": {
+                  "keyword": {
+                    "ignore_above": 256,
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          },
+          "domain": {
+            "dynamic": "true",
+            "properties": {
+              "name": {
+                "fields": {
+                  "raw": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text",
+                "analyzer": "on_dots"
+              }
+            }
+          },
+          "syslog": {
+            "properties": {
+              "message": {
+                "fields": {
+                  "keyword": {
+                    "ignore_above": 256,
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          },
+          "@meta": {
+            "properties": {
+              "resp_port": {
+                "type": "long"
+              },
+              "orig_host": {
+                "type": "ip"
+              },
+              "orig_port": {
+                "type": "long"
+              },
+              "hosts": {
+                "type": "ip"
+              },
+              "resp_host": {
+                "type": "ip"
+              },
+              "geoip_orig": {
+                "dynamic": true,
+                "properties": {
+                  "region_code": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "longitude": {
+                    "type": "float"
+                  },
+                  "region_name": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "latitude": {
+                    "type": "float"
+                  },
+                  "ip": {
+                    "type": "ip"
+                  },
+                  "continent_code": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "autonomous_system": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "country_code3": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "country_code2": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "as_org": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "postal_code": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "dma_code": {
+                    "type": "integer"
+                  },
+                  "city_name": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "country_name": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "timezone": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "asn": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "location": {
+                    "type": "geo_point"
+                  }
+                }
+              },
+              "geoip_resp": {
+                "dynamic": true,
+                "properties": {
+                  "region_code": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "longitude": {
+                    "type": "float"
+                  },
+                  "region_name": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "latitude": {
+                    "type": "float"
+                  },
+                  "ip": {
+                    "type": "ip"
+                  },
+                  "continent_code": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "autonomous_system": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "country_code3": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "country_code2": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "as_org": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "postal_code": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "dma_code": {
+                    "type": "integer"
+                  },
+                  "city_name": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "country_name": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "timezone": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "asn": {
+                    "norms": false,
+                    "type": "keyword"
+                  },
+                  "location": {
+                    "type": "geo_point"
+                  }
+                }
+              }
+            }
+          },
+          "dns": {
+            "properties": {
+              "query": {
+                "type": "keyword",
+                "copy_to": "domain.name"
+              }
+            }
+          },
+          "dhcp": {
+            "properties": {
+              "assigned_ip": {
+                "type": "ip"
+              }
+            }
+          },
+          "@version": {
+            "fields": {
+              "keyword": {
+                "ignore_above": 256,
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "software": {
+            "properties": {
+              "unparsed_version": {
+                "fields": {
+                  "keyword": {
+                    "ignore_above": 256,
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          }
+        },
+        "dynamic_templates": [
+          {
+            "ip_addresses": {
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "ip"
+              },
+              "match": "id_*_h"
+            }
+          },
+          {
+            "record_uids": {
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "keyword"
+              },
+              "match": "uid"
+            }
+          },
+          {
+            "strings_as_keywords": {
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "keyword"
+              },
+              "match": "*"
+            }
+          }
+        ]
+      }
+    },
+    "aliases": {}
+  }
+}

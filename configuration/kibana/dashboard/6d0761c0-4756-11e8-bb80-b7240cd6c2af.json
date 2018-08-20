@@ -1,0 +1,12 @@
+{
+  "title": "Suricata",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"1\",\"w\":6,\"x\":0,\"y\":0},\"id\":\"608923c0-4756-11e8-bb80-b7240cd6c2af\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.2.3\"},{\"gridData\":{\"w\":6,\"h\":3,\"x\":6,\"y\":0,\"i\":\"2\"},\"version\":\"6.2.3\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"id\":\"61764d70-4757-11e8-bb80-b7240cd6c2af\"}]",
+  "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"alert.signature: * alert.category src_ip dest_ip\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+  }
+}

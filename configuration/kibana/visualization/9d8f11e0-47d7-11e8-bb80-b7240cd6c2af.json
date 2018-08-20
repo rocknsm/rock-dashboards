@@ -1,0 +1,11 @@
+{
+  "title": "NOTICE - Top 10",
+  "visState": "{\"title\":\"NOTICE - Top 10\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"notice.note\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":9,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Notice Type\"}}]}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "73788b10-2037-11e8-82ea-3daef40316d8",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+  }
+}
