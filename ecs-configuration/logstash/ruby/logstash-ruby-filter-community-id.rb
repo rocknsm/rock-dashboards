@@ -149,7 +149,6 @@ def filter(event)
   # Hash all the things
   hash = Digest::SHA1.new
   hash.update([@comm_id_seed].pack('n')) # 2-byte seed
-	print bin_to_hex([@comm_id_seed].pack('n')) + " "
 
   hash.update(sip)  # 4 bytes (v4 addr) or 16 bytes (v6 addr)
   hash.update(dip)  # 4 bytes (v4 addr) or 16 bytes (v6 addr)
