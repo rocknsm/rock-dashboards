@@ -1,0 +1,39 @@
+{
+  "index_patterns": [
+    "ecs-bro-*"
+  ],
+  "order": 10,
+  "settings": {
+    "index": {
+      "mapping": {
+        "total_fields": {
+          "limit": 10000
+        }
+      }
+    }
+  },
+  "mappings": {
+    "doc": {
+        "dynamic_templates": [
+          {
+            "ip_addresses": {
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "ip"
+              },
+              "path_match": "*.ip"
+            }
+          },
+          {
+            "strings_as_keywords": {
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "keyword"
+              },
+              "match": "*"
+            }
+          }
+        ]
+      }
+  }
+}
