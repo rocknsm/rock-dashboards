@@ -2,7 +2,7 @@
   "index_patterns": [
     "ecs-suricata-*"
   ],
-  "order": 10,
+  "order": 5,
   "settings": {
     "index": {
       "mapping": {
@@ -90,6 +90,9 @@
             },
             "ip": {
               "type": "ip"
+            },
+            "geo": {
+              "type": "geo_point"
             }
           }
         }

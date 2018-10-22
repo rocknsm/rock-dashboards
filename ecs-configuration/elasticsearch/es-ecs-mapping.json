@@ -13,7 +13,7 @@
     }
   },
   "mappings": {
-    "_doc": {
+    "doc": {
       "_meta": {
         "version": "1.0.0"
       },
