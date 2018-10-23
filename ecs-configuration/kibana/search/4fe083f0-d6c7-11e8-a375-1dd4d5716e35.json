@@ -1,0 +1,20 @@
+{
+  "title": "ECS - Files",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "related.id",
+    "related.ip",
+    "file.mime_type",
+    "file.md5",
+    "file.sha1"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"ce1ef9d0-d349-11e8-a375-1dd4d5716e35\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"event.dataset: file\"},\"filter\":[]}"
+  }
+}
