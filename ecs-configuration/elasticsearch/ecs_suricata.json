@@ -1,0 +1,105 @@
+{
+  "ecs_suricata": {
+    "order": 10,
+    "index_patterns": [
+      "ecs-suricata-*"
+    ],
+    "settings": {
+      "index": {
+        "mapping": {
+          "total_fields": {
+            "limit": "10000"
+          }
+        }
+      }
+    },
+    "mappings": {
+      "doc": {
+        "dynamic_templates": [
+          {
+            "ip_addresses": {
+              "path_match": "*.ip",
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "ip"
+              }
+            }
+          },
+          {
+            "strings_as_keywords": {
+              "match": "*",
+              "match_mapping_type": "string",
+              "mapping": {
+                "type": "keyword"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "event": {
+            "properties": {
+              "id": {
+                "type": "keyword"
+              }
+            }
+          },
+          "network": {
+            "properties": {
+              "application_id": {
+                "type": "keyword"
+              },
+              "source": {
+                "properties": {
+                  "geo": {
+                    "properties": {
+                      "location": {
+                        "type": "geo_point"
+                      }
+                    }
+                  }
+                }
+              },
+              "community_id": {
+                "type": "keyword"
+              },
+              "protocol": {
+                "type": "keyword"
+              },
+              "destination": {
+                "properties": {
+                  "geo": {
+                    "properties": {
+                      "location": {
+                        "type": "geo_point"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "related": {
+            "properties": {
+              "hostname": {
+                "type": "keyword"
+              },
+              "id": {
+                "type": "keyword"
+              },
+              "ip": {
+                "type": "ip"
+              },
+              "geo": {
+                "type": "geo_point"
+              }
+            }
+          }
+        }
+      }
+    },
+    "aliases": {}
+  }
+}
