@@ -9,7 +9,7 @@ for item in index-pattern search visualization dashboard; do
 
     export FIRST=1 
     echo -n "[" > index.json
-    for id in $(curl -s "${KIBANA_URL}/api/saved_objects/_find?type=${item}" | jq -r '.saved_objects[] | .id'); do
+    for id in $(curl -s "${KIBANA_URL}/api/saved_objects/${item}?per_page=1000" | jq -r '.saved_objects[] | .id'); do
         if [ "x${FIRST}" == "x0" ]; then
             echo -n ", " >> index.json
         else
