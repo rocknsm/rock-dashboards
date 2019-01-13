@@ -1,6 +1,7 @@
 {
   "index_patterns": [
-    "ecs-1.0.0-beta2-*"
+    "ecs-1.0.0-beta2-*",
+    "ecs-*"
   ],
   "mappings": {
     "_doc": {
