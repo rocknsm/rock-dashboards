@@ -19,6 +19,6 @@
   ],
   "version": 1,
   "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: files AND files.mime_type: ( \\\"application/java-archive\\\" OR  \\\"application/x-java-applet\\\" OR  \\\"application/x-java-jnlp-file\\\" OR \\\"application/x-dosexec\\\" OR  \\\"application/msword\\\" OR \\\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\\\" OR \\\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\\\" OR \\\"application/vnd.openxmlformats-officedocument.presentationml.presentation\\\" OR \\\"application/pdf\\\"  )\"},\"filter\":[]}"
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: files AND files.mime_type: ( \\\"application/java-archive\\\" OR  \\\"application/x-java-applet\\\" OR  \\\"application/x-java-jnlp-file\\\" OR \\\"application/x-dosexec\\\" OR  \\\"application/msword\\\" OR \\\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\\\" OR \\\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\\\" OR \\\"application/vnd.openxmlformats-officedocument.presentationml.presentation\\\" OR \\\"application/pdf\\\"  )\"},\"filter\":[]}"
   }
 }

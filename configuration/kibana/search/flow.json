@@ -1,0 +1,16 @@
+{
+  "title": "FLOW",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "_source"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"a31126e0-2a3e-11e9-a125-235ea027dc62\",\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647},\"query\":{\"query\":{\"query_string\":{\"query\":\"event_type:flow\",\"analyze_wildcard\":true}},\"language\":\"lucene\"}}"
+  }
+}
