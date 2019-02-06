@@ -1,0 +1,10 @@
+{
+  "title": "Conn Pie Chart",
+  "visState": "{\"title\":\"Conn Pie Chart\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"conn.conn_state\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: conn\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

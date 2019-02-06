@@ -1,0 +1,10 @@
+{
+  "title": "Bytes Over Time",
+  "visState": "{\"title\":\"Bytes Over Time\",\"type\":\"area\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"overlap\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"conn.orig_bytes\",\"customLabel\":\"Sum of Orig Bytes\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"conn.resp_bytes\",\"customLabel\":\"Sum of Resp Bytes\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Divider",
+  "visState": "{\"title\":\"Divider\",\"type\":\"markdown\",\"params\":{\"markdown\":\"# ------------------------------------------------------------------------------------------------------------------------------------------------------------------\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

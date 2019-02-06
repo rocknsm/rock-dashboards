@@ -1,0 +1,10 @@
+{
+  "title": "HTTP Non Standard Hosts",
+  "visState": "{\"title\":\"HTTP Non Standard Hosts\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"http.host\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Host Header\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[],\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"query\":\"NOT http.host: (*.com OR *.net OR *.org)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+  }
+}

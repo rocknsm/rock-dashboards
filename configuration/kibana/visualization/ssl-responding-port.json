@@ -1,0 +1,11 @@
+{
+  "title": "SSL - Responding Port",
+  "visState": "{\"title\":\"SSL - Responding Port\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ssl.id_resp_p\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Responding Port\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "ssl",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "title": "HTTP MIME Type",
+  "visState": "{\"title\":\"HTTP MIME Type\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"http.resp_mime_types\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"MIME Type\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

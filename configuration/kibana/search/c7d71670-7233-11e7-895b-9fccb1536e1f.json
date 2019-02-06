@@ -1,0 +1,19 @@
+{
+  "title": "SMTP to Files Search",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "smtp.fuids",
+    "files.mime_type",
+    "files.filename",
+    "files.total_bytes"
+  ],
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"highlightAll\":true,\"version\":true,\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: (smtp OR files)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"}}"
+  }
+}

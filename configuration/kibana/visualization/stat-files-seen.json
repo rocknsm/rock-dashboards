@@ -1,0 +1,11 @@
+{
+  "title": "STAT - Files Seen",
+  "visState": "{\"title\":\"STAT - Files Seen\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.files\",\"customLabel\":\"Files Seen\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "savedSearchId": "stats",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[]}"
+  }
+}

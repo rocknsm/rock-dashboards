@@ -1,0 +1,10 @@
+{
+  "title": "DNS Recursion Available",
+  "visState": "{\"title\":\"DNS Recursion Available\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"dns.RA\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"DNS Authoritative Answer\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

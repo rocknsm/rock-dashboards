@@ -1,0 +1,10 @@
+{
+  "title": "Severity",
+  "visState": "{\"title\":\"Severity\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"alert.severity\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"a31126e0-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

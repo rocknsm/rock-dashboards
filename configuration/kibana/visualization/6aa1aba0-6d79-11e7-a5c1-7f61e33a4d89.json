@@ -1,0 +1,10 @@
+{
+  "title": "HTTP Logs",
+  "visState": "{\"title\":\"HTTP Logs\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"25\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total\"}}],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: http\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

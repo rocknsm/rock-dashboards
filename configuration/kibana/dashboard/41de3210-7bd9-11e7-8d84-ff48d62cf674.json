@@ -1,0 +1,13 @@
+{
+  "title": "*DNS",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":1,\"id\":\"2847b7e0-19a0-11e7-85aa-cd4a4afebcf7\",\"panelIndex\":1,\"row\":1,\"size_x\":10,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"332af570-199e-11e7-85aa-cd4a4afebcf7\",\"panelIndex\":2,\"row\":10,\"size_x\":2,\"size_y\":5,\"type\":\"visualization\"},{\"col\":3,\"id\":\"802bfb70-199f-11e7-85aa-cd4a4afebcf7\",\"panelIndex\":3,\"row\":10,\"size_x\":2,\"size_y\":5,\"type\":\"visualization\"},{\"col\":11,\"id\":\"24d77210-7bd1-11e7-8d84-ff48d62cf674\",\"panelIndex\":7,\"row\":1,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"b44b3b20-7bd1-11e7-8d84-ff48d62cf674\",\"panelIndex\":9,\"row\":8,\"size_x\":3,\"size_y\":18,\"type\":\"visualization\"},{\"col\":1,\"id\":\"407ad8e0-7bd6-11e7-8d84-ff48d62cf674\",\"panelIndex\":10,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"7b3b04e0-7bd7-11e7-8d84-ff48d62cf674\",\"panelIndex\":11,\"row\":4,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"8c019af0-7bd7-11e7-8d84-ff48d62cf674\",\"panelIndex\":12,\"row\":4,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"6686b9e0-7bd7-11e7-8d84-ff48d62cf674\",\"panelIndex\":14,\"row\":6,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":10,\"id\":\"c663a590-7bd1-11e7-8d84-ff48d62cf674\",\"panelIndex\":16,\"row\":8,\"size_x\":3,\"size_y\":18,\"type\":\"visualization\"},{\"col\":9,\"id\":\"a128a4f0-7bd7-11e7-8d84-ff48d62cf674\",\"panelIndex\":18,\"row\":6,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":11,\"id\":\"86306380-7bd8-11e7-b629-a97b0307bf20\",\"panelIndex\":19,\"row\":4,\"size_x\":2,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"33b383f0-7bd6-11e7-8d84-ff48d62cf674\",\"panelIndex\":20,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"}]",
+  "optionsJSON": "{\"darkTheme\":true}",
+  "uiStateJSON": "{\"P-16\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-19\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-3\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-9\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"@meta.stream: dns\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}

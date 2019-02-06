@@ -1,0 +1,10 @@
+{
+  "title": "Dashboard Table",
+  "visState": "{\"title\":\"Dashboard Table\",\"type\":\"markdown\",\"params\":{\"markdown\":\"### Dashboards\\n\\n#### General\\n\\n- [Overview](/app/kibana#/search/CONN)\\n\\n- [Quick Wins](/app/kibana#/dashboard/overview)\\n\\n- [Notice Log](/#/dashboard/Notice-Log)\\n\\n- [Weird Log](/#/dashboard/Weird-Log)\\n\\n- [Files Log](/#/dashboard/Files)\\n\\n#### Flows\\n\\n- [Base Flow](/app/kibana#/dashboard/flow)\\n\\n- [Internal to External](/#/dashboard/Internal-to-External)\\n\\n- [Internal to Internal](/#/dashboard/Internal-to-Internal)\\n\\n- [External to Internal](/#/dashboard/External-to-Internal)\\n\\n#### Protocol Specific\\n\\n- [HTTP](/#/dashboard/HTTP)\\n\\n- [SSL](/#/dashboard/SSL)\\n\\n- [DNS](/#/dashboard/DNS)\\n\\n- [FTP](/#/dashboard/FTP)\\n\\n- [SMTP](/#/dashboard/SMTP)\\n\\n- [Kerberos](/#/dashboard/Kerberos)\\n\\n\\n#### Other Tools\\n\\n- [Suricata Alerts](/#/dashboard/Suricata-Alerts)\\n\\n- [FSF Scans](/#/dashboard/FSF-Scans)\\n\\n#### Health and Stats\\n\\n- [Sensor Health](/#/dashboard/Sensor-Health)\"},\"aggs\":[],\"listeners\":{}}",
+  "uiStateJSON": "{}",
+  "description": "",
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+  }
+}

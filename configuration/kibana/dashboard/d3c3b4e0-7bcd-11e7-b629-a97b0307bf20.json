@@ -1,0 +1,13 @@
+{
+  "title": "*FTP",
+  "hits": 0,
+  "description": "",
+  "panelsJSON": "[{\"col\":1,\"id\":\"2847b7e0-19a0-11e7-85aa-cd4a4afebcf7\",\"panelIndex\":1,\"row\":1,\"size_x\":9,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"332af570-199e-11e7-85aa-cd4a4afebcf7\",\"panelIndex\":2,\"row\":3,\"size_x\":2,\"size_y\":5,\"type\":\"visualization\"},{\"col\":11,\"id\":\"802bfb70-199f-11e7-85aa-cd4a4afebcf7\",\"panelIndex\":3,\"row\":3,\"size_x\":2,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"e08c1810-7bc9-11e7-b629-a97b0307bf20\",\"panelIndex\":4,\"row\":3,\"size_x\":4,\"size_y\":5,\"type\":\"visualization\"},{\"col\":7,\"id\":\"238776a0-7bca-11e7-b629-a97b0307bf20\",\"panelIndex\":6,\"row\":3,\"size_x\":2,\"size_y\":5,\"type\":\"visualization\"},{\"col\":11,\"id\":\"3ee53b30-7bca-11e7-b629-a97b0307bf20\",\"panelIndex\":7,\"row\":8,\"size_x\":2,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"0d8045d0-7bca-11e7-b629-a97b0307bf20\",\"panelIndex\":8,\"row\":3,\"size_x\":2,\"size_y\":5,\"type\":\"visualization\"},{\"col\":10,\"id\":\"8e4c80e0-7bcd-11e7-b629-a97b0307bf20\",\"panelIndex\":10,\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"37a21ce0-7bce-11e7-b629-a97b0307bf20\",\"panelIndex\":11,\"row\":8,\"size_x\":6,\"size_y\":5,\"type\":\"visualization\"},{\"size_x\":4,\"size_y\":5,\"panelIndex\":12,\"type\":\"visualization\",\"id\":\"84c3a1a0-2ada-11e7-958e-1fb88813523f\",\"col\":7,\"row\":8}]",
+  "optionsJSON": "{\"darkTheme\":true}",
+  "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-3\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-4\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-7\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-8\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-11\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-12\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+  "version": 1,
+  "timeRestore": false,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"@meta.stream:ftp\"}}}],\"highlightAll\":true,\"version\":true}"
+  }
+}
