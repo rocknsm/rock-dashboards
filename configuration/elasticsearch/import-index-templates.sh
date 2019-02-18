@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 _URL=$1
 ES_URL=${_URL:='http://127.0.0.1:9200'}
@@ -28,7 +28,7 @@ for item in *.json; do
     fi
   fi
 
-  if [ "${version}" -gt "${existing_version}" ]; then
+  if [[ "${version}" -gt "${existing_version}" ]]; then
     echo "Installing index mapping template: ${name} version ${version}" >/dev/stderr
     response=$(curl -s -XPUT "${ES_URL}/_template/${name}" -H "Content-Type: application/json" --data "$(cat ${item} | jq ".${name}")")
     result=$(echo ${response} | jq -r '.acknowledged')
