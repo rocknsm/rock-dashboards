@@ -1,5 +1,6 @@
 {
   "default": {
+    "version": 1,
     "order": 0,
     "index_patterns": [
       "*"
