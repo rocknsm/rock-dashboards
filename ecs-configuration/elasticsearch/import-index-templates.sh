@@ -16,6 +16,12 @@ for item in *.json; do
   name=$(cat ${item} | jq -r 'keys | .[]')
   version=$(cat ${item} | jq -r ".${name}.version")
 
+  # Verify that a version number exists in the object
+  if ! [[ ${version} =~ ^[0-9]+$ ]] ; then
+    echo "Could not find a version number for $(realpath ${name}.json). \
+Verify a version exists at the top level and is an integer." >&2; exit 1
+  fi
+
   existing_version='-1'
   # Check if template already exists
   if curl -sI "${ES_URL}/_template/${name}" | grep -q "200 OK"; then
@@ -39,7 +45,7 @@ for item in *.json; do
       echo "Failed putting ${name} version ${version}: \n ${response}" > /dev/null
     fi
   else
-    ok=$[$ok + 1]
+    ok=$(($ok + 1))
   fi
 done
 

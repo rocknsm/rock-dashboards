@@ -1,5 +1,6 @@
 {
   "ecs_bro": {
+    "version": 1,
     "order": 10,
     "index_patterns": [
       "ecs-bro-*"
