@@ -13,6 +13,6 @@
   ],
   "version": 1,
   "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"9ba9b480-2a3e-11e9-a125-235ea027dc62\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream:http AND _exists_:(http.host AND http.user_agent)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream:http AND _exists_:(http.host AND http.user_agent)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
   }
 }

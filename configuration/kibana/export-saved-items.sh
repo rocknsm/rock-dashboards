@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 _URL=$1
 KIBANA_URL=${_URL:=http://127.0.0.1:5601}
@@ -7,9 +7,9 @@ for item in index-pattern search visualization dashboard; do
     mkdir -p ${item}
     cd ${item}
 
-    export FIRST=1 
+    export FIRST=1
     echo -n "[" > index.json
-    for id in $(curl -s "${KIBANA_URL}/api/saved_objects/_find?type=${item}" | jq -r '.saved_objects[] | .id'); do
+    for id in $(curl -s "${KIBANA_URL}/api/saved_objects/_find?type=${item}&per_page=1000" | jq -r '.saved_objects[] | .id'); do
         if [ "x${FIRST}" == "x0" ]; then
             echo -n ", " >> index.json
         else
@@ -27,3 +27,6 @@ for item in index-pattern search visualization dashboard; do
     cd ..
 done
 
+# Save default index
+echo "Exporting default index pattern setting."
+curl -s "${KIBANA_URL}/api/kibana/settings" | jq '{ "value": .settings.defaultIndex.userValue }' > index-pattern/default.json
