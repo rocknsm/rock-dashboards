@@ -1,4 +1,4 @@
-# Load ROCK 2.2 Kibana Dashboards
+# Load ROCK Kibana Dashboards, Elastic Mappings, and Logstash configs
 
 This repository is arranged using the logstash module structure. Note that using it as a logstash module is not yet tested, but the goal is to
 get there. That said, there's currently two configurations in this repo. One for the "stable" configuration, and one for an [Elastic Common Schema](https://github.com/elastic/ecs) configuration. The ECS config will become the stable configuration but for now is tech preview.
