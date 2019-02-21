@@ -29,4 +29,4 @@ done
 
 # Save default index
 echo "Exporting default index pattern setting."
-curl -s "${KIBANA_URL}/api/kibana/settings" | jq '{ "value": .settings.defaultIndex.userValue }' > index-pattern/default.json
+curl -s "${KIBANA_URL}/api/kibana/settings" | jq '.settings.defaultIndex }' > index-pattern/default.json
