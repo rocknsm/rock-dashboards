@@ -19,31 +19,26 @@
       }
     },
     "mappings": {
-      "_default_": {
-        "_all": {
-          "enabled": false
-        },
-        "properties": {
-          "@timestamp": {
-            "type": "date"
-          }
-        },
-        "dynamic_templates": [
-          {
-            "all_fields": {
-              "match_mapping_type": "*",
-              "mapping": {
-                "index": true,
-                "include_in_all": false,
-                "analyzer": "keyword",
-                "norms": false,
-                "ignore_above": 256,
-                "type": "keyword"
-              }
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        }
+      },
+      "dynamic_templates": [
+        {
+          "all_fields": {
+            "match_mapping_type": "*",
+            "mapping": {
+              "index": true,
+              "include_in_all": false,
+              "analyzer": "keyword",
+              "norms": false,
+              "ignore_above": 256,
+              "type": "keyword"
             }
           }
-        ]
-      }
+        }
+      ]
     },
     "aliases": {}
   }

@@ -25,76 +25,75 @@
       }
     },
     "mappings": {
-      "_doc": {
-	      "dynamic_templates": [
-          {
-            "ip_addresses": {
-              "match_mapping_type": "string",
-              "match": "*_ip",
-              "mapping": {
-                "type": "ip"
-              }
-            }
-          },
-          {
-            "strings_as_keywords": {
-              "match_mapping_type": "string",
-              "match": "*",
-              "mapping": {
-                "type": "keyword"
-              }
+      "dynamic_templates": [
+        {
+          "ip_addresses": {
+            "match_mapping_type": "string",
+            "match": "*_ip",
+            "mapping": {
+              "type": "ip"
             }
           }
-        ],
-        "properties": {
-          "@timestamp": {
-            "type": "date"
-          },
-          "@version": {
-            "type": "text",
-            "fields": {
-              "keyword": {
-                "type": "keyword",
-                "ignore_above": 256
-              }
+        },
+        {
+          "strings_as_keywords": {
+            "match_mapping_type": "string",
+            "match": "*",
+            "mapping": {
+              "type": "keyword"
             }
-          },
-          "event_type": {
-            "type": "keyword"
-          },
-          "flow": {
-            "properties": {
-              "age": {
-                "type": "long"
-              },
-              "alerted": {
-                "type": "boolean"
-              },
-              "bytes_toclient": {
-                "type": "long"
-              },
-              "bytes_toserver": {
-                "type": "long"
-              },
-              "end": {
-                "type": "date"
-              },
-              "pkts_toclient": {
-                "type": "long"
-              },
-              "pkts_toserver": {
-                "type": "long"
-              },
-              "start": {
-                "type": "date"
-              }
+          }
+        }
+      ],
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
             }
-          },
-          "flow_id": {
-            "type": "long"
-          },
-          "http": {
-            "properties": {
+          }
+        },
+        "event_type": {
+          "type": "keyword"
+        },
+        "flow": {
+          "properties": {
+            "age": {
+              "type": "long"
+            },
+            "alerted": {
+              "type": "boolean"
+            },
+            "bytes_toclient": {
+              "type": "long"
+            },
+            "bytes_toserver": {
+              "type": "long"
+            },
+            "end": {
+              "type": "date"
+            },
+            "pkts_toclient": {
+              "type": "long"
+            },
+            "pkts_toserver": {
+              "type": "long"
+            },
+            "start": {
+              "type": "date"
+            }
+          }
+        },
+        "flow_id": {
+          "type": "long"
+        },
+        "http": {
+          "properties": {
             "http_user_agent": {
               "type": "text",
               "fields": {
@@ -104,8 +103,8 @@
                 }
               }
             }
-}
-          },
+          }
+        },
         "icmp_code": {
           "type": "long"
         },
@@ -576,5 +575,4 @@
       }
     }
   }
-}
 }
