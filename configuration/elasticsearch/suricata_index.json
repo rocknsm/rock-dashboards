@@ -59,6 +59,9 @@
               }
             }
           },
+          "event_type": {
+            "type": "keyword"
+          },
           "flow": {
             "properties": {
               "age": {

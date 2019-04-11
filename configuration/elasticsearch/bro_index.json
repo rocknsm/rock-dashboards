@@ -163,6 +163,9 @@
               "resp_host": {
                 "type": "ip"
               },
+              "event_type": {
+                "type": "keyword"
+              },
               "geoip_orig": {
                 "dynamic": true,
                 "properties": {
