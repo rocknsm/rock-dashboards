@@ -22,6 +22,9 @@ for item in index-pattern search visualization dashboard; do
 
     done
     echo -n "]" >> index.json
+
+    # Sort index for idempotence
+    jq '. | sort' < index.json > index2.json && mv index2.json index.json
     unset FIRST
 
     cd ..
@@ -29,4 +32,4 @@ done
 
 # Save default index
 echo "Exporting default index pattern setting."
-curl -s "${KIBANA_URL}/api/kibana/settings" | jq '.settings.defaultIndex }' > index-pattern/default.json
+curl -s "${KIBANA_URL}/api/kibana/settings" | jq '.settings.defaultIndex' > index-pattern/default.json
