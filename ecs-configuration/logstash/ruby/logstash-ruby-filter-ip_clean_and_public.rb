@@ -112,6 +112,10 @@ def filter(event)
                 ip_public = false
                 ip_type = "private"
                 ip_rfc = "RFC_1918"
+            else
+              ip_public = false
+              ip_type = "private"
+              ip_rfc = "RFC_1366"
             end
 
         # Private/RFC-1918 -- continued -- 100.64.0.1 - 100.127.255.254
@@ -121,6 +125,10 @@ def filter(event)
                 ip_public = false
                 ip_type = "private"
                 ip_rfc = "RFC_1918"
+            else
+              ip_public = false
+              ip_type = "private"
+              ip_rfc = "RFC_1366"
             end
 
         # The remaining possible NON public/routable IPs begin with 2 and are either multicast or broadcast
@@ -137,6 +145,10 @@ def filter(event)
                 ip_public = false
                 ip_type = "multicast"
                 ip_rfc = "RFC_1112"
+            else
+              ip_public = false
+              ip_type = "private"
+              ip_rfc = "RFC_1366"
             end
 
         # RFC1366, Public/Routable
