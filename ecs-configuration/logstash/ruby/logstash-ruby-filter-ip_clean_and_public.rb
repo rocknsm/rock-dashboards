@@ -113,8 +113,8 @@ def filter(event)
                 ip_type = "private"
                 ip_rfc = "RFC_1918"
             else
-              ip_public = false
-              ip_type = "private"
+              ip_public = true
+              ip_type = "public"
               ip_rfc = "RFC_1366"
             end
 
@@ -126,8 +126,8 @@ def filter(event)
                 ip_type = "private"
                 ip_rfc = "RFC_1918"
             else
-              ip_public = false
-              ip_type = "private"
+              ip_public = true
+              ip_type = "public"
               ip_rfc = "RFC_1366"
             end
 
@@ -146,8 +146,8 @@ def filter(event)
                 ip_type = "multicast"
                 ip_rfc = "RFC_1112"
             else
-              ip_public = false
-              ip_type = "private"
+              ip_public = true
+              ip_type = "public"
               ip_rfc = "RFC_1366"
             end
 
