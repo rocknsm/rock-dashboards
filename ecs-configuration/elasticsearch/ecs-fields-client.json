@@ -1,0 +1,201 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "client": {
+        "properties": {
+          "address": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "args": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "autonomous_system": {
+            "properties": {
+              "number": {
+                "type": "long"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "bytes": {
+            "type": "long"
+          },
+          "command": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "connection": {
+            "properties": {
+              "history": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "history_detailed": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "domain": {
+            "copy_to": "related.domain",
+            "type": "keyword"
+          },
+          "file": {
+            "properties": {
+              "extension": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "mime_type": {
+                "type": "keyword"
+              }
+            }
+          },
+          "fqdn": {
+            "copy_to": "related.domain",
+            "type": "keyword"
+          },
+          "geo": {
+            "properties": {
+              "city_name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "continent_code": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "continent_name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "country_code2": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "country_code3": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "country_iso_code": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "country_name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "location": {
+                "type": "geo_point"
+              },
+              "name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "postal_code": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "region_iso_code": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "region_name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "timezone": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "hostname": {
+            "copy_to": "related.domain",
+            "type": "keyword"
+          },
+          "ip": {
+            "type": "ip"
+          },
+          "ip_bytes": {
+            "type": "long"
+          },
+          "ip_public": {
+            "type": "boolean"
+          },
+          "ip_type": {
+            "type": "keyword"
+          },
+          "ip_version": {
+            "type": "keyword"
+          },
+          "mac": {
+            "copy_to": "related.mac",
+            "type": "keyword"
+          },
+          "mime_type": {
+            "type": "keyword"
+          },
+          "not_ip": {
+            "type": "keyword"
+          },
+          "packets": {
+            "type": "long"
+          },
+          "port": {
+            "type": "long"
+          },
+          "software": {
+            "properties": {
+              "major": {
+                "type": "long"
+              },
+              "minor": {
+                "type": "long"
+              },
+              "original": {
+                "type": "keyword"
+              }
+            }
+          },
+          "user": {
+            "properties": {
+              "email": {
+                "type": "keyword"
+              },
+              "full_name": {
+                "type": "keyword"
+              },
+              "hash": {
+                "type": "keyword"
+              },
+              "id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "password": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

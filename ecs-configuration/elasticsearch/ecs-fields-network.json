@@ -1,0 +1,69 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "network": {
+        "properties": {
+          "bytes": {
+            "type": "long"
+          },
+          "community_id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "connection": {
+            "properties": {
+              "history": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "history_detailed": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "direction": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "forwarded_ip": {
+            "copy_to": "related.ip",
+            "type": "ip"
+          },
+          "iana_number": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "name": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ip_bytes": {
+            "type": "long"
+          },
+          "missed_bytes": {
+            "type": "long"
+          },
+          "packets": {
+            "type": "long"
+          },
+          "protocol": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "transport": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "type": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

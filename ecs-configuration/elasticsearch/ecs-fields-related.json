@@ -1,0 +1,37 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401, 
+  "mappings": {
+    "properties": {
+      "related": {
+        "properties": {
+          "ip": {
+            "type": "ip"
+          },
+          "geo": {
+            "type": "geo_point"
+          },
+          "id": {
+            "type": "keyword"
+          },
+          "hash": {
+            "type": "keyword"
+          },
+          "domain": {
+            "type": "keyword"
+          },
+          "mac": {
+            "type": "keyword"
+          },
+          "vlan_id": {
+            "type": "keyword"
+          },
+          "user": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+} 

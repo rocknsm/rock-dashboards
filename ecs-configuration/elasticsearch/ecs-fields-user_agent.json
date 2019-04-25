@@ -1,0 +1,89 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "user_agent": {
+        "properties": {
+          "build": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "device": {
+            "properties": {
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              }
+            }
+          },
+          "major": {
+            "type": "long"
+          },
+          "minor": {
+            "type": "long"
+          },
+          "minor2": {
+            "type": "long"
+          },
+          "minor3": {
+            "type": "long"
+          },
+          "name": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "original": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "patch": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "os": {
+            "properties": {
+              "family": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "full": {
+                "ignore_above": 2048,
+                "type": "keyword"
+              },
+              "kernel": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "minor": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "major": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 2048,
+                "type": "keyword"
+              },
+              "platform": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "version": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

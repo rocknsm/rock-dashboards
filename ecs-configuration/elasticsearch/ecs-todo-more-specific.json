@@ -1,22 +1,106 @@
 {
-  "index_patterns": [
-    "ecs-1.0.0-beta2-*",
-    "ecs-*"
-  ],
+  "order": 1,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042301,
+  "settings": {
+    "index": {
+      "mapping": {
+        "total_fields": {
+          "coerce": true,
+          "ignore_malformed": true,
+          "limit": 5000,
+          "total_fields.limit": "1000"
+        }
+      },
+      "refresh_interval": "10s"
+    }
+  },  
   "mappings": {
     "_doc": {
       "_meta": {
-        "version": "1.0.0-beta2"
+        "version": "1.0.0",
+        "vendor": "rocknsm" 
       },
       "date_detection": false,
       "dynamic_templates": [
         {
-          "strings_as_keyword": {
+          
+          "string_fields": {
+            "match_mapping_type": "string",
             "mapping": {
-              "ignore_above": 1024,
-              "type": "keyword"
-            },
-            "match_mapping_type": "string"
+              "ignore_above": 4096,
+              "type": "keyword",
+              "fields": {
+                "text": {
+                  "type": "text"
+                }
+              }
+            }
+          }
+        },
+        {
+          "numeric_integer_fields": {
+            "match_mapping_type": "integer",
+            "mapping": {
+              "type": "integer",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        {
+          "numeric_long_fields": {
+            "match_mapping_type": "long",
+            "mapping": {
+              "type": "long",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        {
+          "numeric_float_fields": {
+            "match_mapping_type": "float",
+            "mapping": {
+              "type": "float",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        {
+          "numeric_double_fields": {
+            "match_mapping_type": "double",
+            "mapping": {
+              "type": "double",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        {
+          "boolean_fields": {
+            "match_mapping_type": "boolean",
+            "mapping": {
+              "type": "boolean",
+              "fields": {
+                "keyword": {
+                  "type": "keyword"
+                }
+              }
+            }
           }
         }
       ],
@@ -745,7 +829,6 @@
           }
         },
         "tags": {
-          "ignore_above": 1024,
           "type": "keyword"
         },
         "url": {
@@ -844,17 +927,6 @@
           }
         }
       }
-    }
-  },
-  "order": 1,
-  "settings": {
-    "index": {
-      "mapping": {
-        "total_fields": {
-          "limit": 10000
-        }
-      },
-      "refresh_interval": "5s"
     }
   }
 }

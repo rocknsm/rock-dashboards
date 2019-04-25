@@ -1,0 +1,36 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "host": {
+        "properties": {
+          "architecture": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "host": {
+            "copy_to": "related.domain",
+            "type": "keyword"
+          },
+          "hostname": {
+            "copy_to": "related.domain",
+            "type": "keyword"
+          },
+          "ip": {
+            "copy_to": "related.ip",
+            "type": "ip"
+          },
+          "port": {
+            "type": "long"
+          },
+          "type": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

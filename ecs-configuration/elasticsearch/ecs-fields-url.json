@@ -1,0 +1,62 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "url": {
+        "properties": {
+          "domain": {
+            "copy_to": "related.domain",
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "extension": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "fragment": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "full": {
+            "ignore_above": 8000,
+            "type": "keyword"
+          },
+          "original": {
+            "ignore_above": 8000,
+            "type": "keyword"
+          },
+          "port": {
+            "type": "long"
+          },
+          "path": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "query": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "scheme": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "username": {
+            "copy_to": "related.user",
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "password": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "variables": {
+            "ignore_above": 2048,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
