@@ -1,18 +1,14 @@
 {
   "order": 60,
   "index_patterns": [
-    "ecs-bro-miscellaneous-dpd-*"
+    "ecs-bro-network-ftp-*"
   ],
   "mappings": {
     "properties": {
-      "dpd": {
+      "irc": {
         "properties": {
-          "analyzer": {
-            "ignore_above": 1024,
-            "type": "keyword"
-          },
-          "failure_reason": {
-            "ignore_above": 4096,
+          "command": {
+            "ignore_above": 8000,
             "fields": {
               "text": {
                 "type": "text"
@@ -20,8 +16,13 @@
             },
             "type": "keyword"
           },
-          "packet_segment": {
-            "ignore_above": 1024,
+          "nickname": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           }
         }

@@ -1,59 +1,57 @@
 {
-  "ecs_bro": {
-    "order": 60,
-    "index_patterns": [
-      "ecs-bro-network-ftp-*"
-    ],
-    "mappings": {
-      "properties": {
-        "ftp": {
-          "properties": {
-            "args": {
-              "ignore_above": 8000,
-              "fields": {
-                "text": {
-                  "type": "text"
-                }
-              },
-              "type": "keyword"
-            },
-            "command": {
-              "ignore_above": 8000,
-              "fields": {
-                "text": {
-                  "type": "text"
-                }
-              },
-              "type": "keyword"
-            },
-            "data_channel": {
-              "properties": {
-                "orig_ip": {
-                  "type": "ip"
-                },
-                "passive": {
-                  "type": "boolean"
-                },
-                "resp_ip": {
-                  "type": "ip"
-                },
-                "resp_port": {
-                  "type": "long"
-                }
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-network-ftp-*"
+  ],
+  "mappings": {
+    "properties": {
+      "ftp": {
+        "properties": {
+          "args": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
               }
             },
-            "passive": {
-              "type": "boolean"
+            "type": "keyword"
+          },
+          "command": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
             },
-            "response": {
-              "properties": {
-                "code": {
-                  "type": "long"
-                },
-                "message": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                }
+            "type": "keyword"
+          },
+          "data_channel": {
+            "properties": {
+              "orig_ip": {
+                "type": "ip"
+              },
+              "passive": {
+                "type": "boolean"
+              },
+              "resp_ip": {
+                "type": "ip"
+              },
+              "resp_port": {
+                "type": "long"
+              }
+            }
+          },
+          "passive": {
+            "type": "boolean"
+          },
+          "response": {
+            "properties": {
+              "code": {
+                "type": "long"
+              },
+              "message": {
+                "ignore_above": 1024,
+                "type": "keyword"
               }
             }
           }

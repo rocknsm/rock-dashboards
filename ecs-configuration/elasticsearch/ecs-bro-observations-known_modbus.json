@@ -1,0 +1,18 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-observations-known_modbus-*"
+  ],
+  "mappings": {
+    "properties": {
+      "known_modbus": {
+        "properties": {
+          "device_type": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

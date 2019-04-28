@@ -1,67 +1,65 @@
 {
-  "ecs_bro": {
-    "order": 60,
-    "index_patterns": [
-      "ecs-bro-network-dhcp-*"
-    ],
-    "mappings": {
-      "properties": {
-        "dhcp": {
-          "properties": {
-            "assigned_addr": {
-              "type": "ip"
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-network-dhcp-*"
+  ],
+  "mappings": {
+    "properties": {
+      "dhcp": {
+        "properties": {
+          "assigned_addr": {
+            "type": "ip"
+          },
+          "agent_remote_id": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "circuit_id": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "client_message": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "client_software": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
             },
-            "agent_remote_id": {
-              "ignore_above": 4096,
-              "type": "keyword"
+            "type": "keyword"
+          },
+          "msg_orig": {
+            "type": "ip"
+          },
+          "msg_types": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "lease_time": {
+            "type": "float"
+          },
+          "requested_addr": {
+            "type": "ip"
+          },
+          "server_message": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "server_software": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
             },
-            "circuit_id": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "client_message": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "client_software": {
-              "ignore_above": 4096,
-              "fields": {
-                "text": {
-                  "type": "text"
-                }
-              },
-              "type": "keyword"
-            },
-            "msg_orig": {
-              "type": "ip"
-            },
-            "msg_types": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "lease_time": {
-              "type": "float"
-            },
-            "requested_addr": {
-              "type": "ip"
-            },
-            "server_message": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "server_software": {
-              "ignore_above": 4096,
-              "fields": {
-                "text": {
-                  "type": "text"
-                }
-              },
-              "type": "keyword"
-            },
-            "subscriber_id": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            }
+            "type": "keyword"
+          },
+          "subscriber_id": {
+            "ignore_above": 4096,
+            "type": "keyword"
           }
         }
       }

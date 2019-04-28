@@ -1,0 +1,76 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-detection-notice-*"
+  ],
+  "mappings": {
+    "properties": {
+      "notice": {
+        "properties": {
+          "file": {
+            "properties": {
+              "description": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "actions": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "dropped": {
+            "type": "boolean"
+          },
+          "email_body_sections": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "message": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "note": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          }
+        },
+        "number": {
+          "type": "long"
+        },
+        "peer_description": {
+          "ignore_above": 1024,
+          "type": "keyword"
+        },
+        "sub_message": {
+          "ignore_above": 1024,
+          "fields": {
+            "text": {
+              "type": "text"
+            }
+          },
+          "type": "keyword"
+        }
+      },
+        "supress_duration": {
+          "type": "long"
+        }
+      }
+    }
+  }
+}

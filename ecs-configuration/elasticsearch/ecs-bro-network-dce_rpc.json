@@ -1,28 +1,26 @@
 {
-  "ecs_bro": {
-    "order": 60,
-    "index_patterns": [
-      "ecs-bro-network-dce_rpc-*"
-    ],
-    "mappings": {
-      "properties": {
-        "dce_rpc": {
-          "properties": {
-            "endpoint": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "named_pipe": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "operation": {
-              "ignore_above": 4096,
-              "type": "keyword"
-            },
-            "round_trip_time": {
-              "type": "long"
-            }
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-network-dce_rpc-*"
+  ],
+  "mappings": {
+    "properties": {
+      "dce_rpc": {
+        "properties": {
+          "endpoint": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "named_pipe": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "operation": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "round_trip_time": {
+            "type": "long"
           }
         }
       }
