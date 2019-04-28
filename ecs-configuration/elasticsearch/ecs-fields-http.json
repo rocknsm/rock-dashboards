@@ -8,6 +8,11 @@
         "properties": {
           "cookie_variables": {
             "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "request": {

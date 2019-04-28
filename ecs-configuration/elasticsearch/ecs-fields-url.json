@@ -9,6 +9,11 @@
           "domain": {
             "copy_to": "related.domain",
             "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "extension": {
@@ -17,14 +22,45 @@
           },
           "fragment": {
             "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "full": {
             "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
+          },
+          "meta": {
+            "properties": {
+              "has_non_ascii": {
+                "type": "boolean"
+              },
+              "has_whitespace": {
+                "type": "boolean"
+              },
+              "total_length": {
+                "type": "long"
+              },
+              "paths": {
+                "type": "long"
+              }
+            }
           },
           "original": {
             "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "port": {
@@ -32,10 +68,20 @@
           },
           "path": {
             "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "query": {
             "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "scheme": {
@@ -45,6 +91,11 @@
           "username": {
             "copy_to": "related.user",
             "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "password": {
@@ -53,6 +104,11 @@
           },
           "variables": {
             "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           }
         }

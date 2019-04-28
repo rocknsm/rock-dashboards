@@ -14,12 +14,24 @@
             "properties": {
               "name": {
                 "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               }
             }
           },
           "major": {
             "type": "long"
+          },
+          "meta": {
+            "properties": {
+              "total_length": {
+                "type": "long"
+              }
+            }
           },
           "minor": {
             "type": "long"
@@ -32,10 +44,20 @@
           },
           "name": {
             "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "original": {
-            "ignore_above": 4096,
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
           "patch": {
@@ -50,6 +72,11 @@
               },
               "full": {
                 "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               },
               "kernel": {

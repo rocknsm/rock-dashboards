@@ -13,18 +13,6 @@
             "ignore_above": 1024,
             "type": "keyword"
           },
-          "connection": {
-            "properties": {
-              "history": {
-                "ignore_above": 1024,
-                "type": "keyword"
-              },
-              "history_detailed": {
-                "ignore_above": 1024,
-                "type": "keyword"
-              }
-            }
-          },
           "direction": {
             "ignore_above": 1024,
             "type": "keyword"
@@ -40,12 +28,6 @@
           "name": {
             "ignore_above": 1024,
             "type": "keyword"
-          },
-          "ip_bytes": {
-            "type": "long"
-          },
-          "missed_bytes": {
-            "type": "long"
           },
           "packets": {
             "type": "long"

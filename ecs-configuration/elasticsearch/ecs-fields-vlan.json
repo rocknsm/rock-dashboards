@@ -1,0 +1,77 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "vlan": {
+        "properties": {
+          "additional": {
+            "properties": {
+              "id": {
+                "copy_to": "related.vlan",
+                "type": "long"
+              },
+              "name": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          },
+          "id": {
+            "copy_to": "related.vlan",
+            "type": "long"
+          },
+          "inner": {
+            "properties": {
+              "id": {
+                "copy_to": "related.vlan",
+                "type": "long"
+              },
+              "name": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          },
+          "name": {
+            "ignore_above": 2048,
+            "type": "keyword",
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            }
+          },
+          "outer": {
+            "properties": {
+              "id": {
+                "copy_to": "related.vlan",
+                "type": "long"
+              },
+              "name": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "order": 20,
+  "index_patterns": [ "ecs-*" ],
+  "version": 2019042401,
+  "mappings": {
+    "properties": {
+      "software": {
+        "properties": {
+          "additional": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "device": {
+            "properties": {
+              "name": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "major": {
+                "type": "long"
+              },
+              "minor": {
+                "type": "long"
+              },
+              "minor2": {
+                "type": "long"
+              },
+              "minor3": {
+                "type": "long"
+              }
+            }
+          },
+          "flash_version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ip": {
+            "copy_to": "related.ip",
+            "type": "keyword"
+          },
+          "name": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "os": {
+            "properties": {
+              "full": {
+                "ignore_above": 2048,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 2048,
+                "type": "keyword"
+              },
+              "version": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "original": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "port": {
+            "type": "long"
+          },
+          "type": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
