@@ -1,15 +1,13 @@
 {
-  "order": 20,
+  "order": 60,
   "index_patterns": [
-    "ecs-*"
+    "ecs-bro-network-sip-*"
   ],
-  "version": 2019042401,
   "mappings": {
     "properties": {
-      "url": {
+      "sip": {
         "properties": {
-          "domain": {
-            "copy_to": "related.domain",
+          "call_id": {
             "ignore_above": 4096,
             "fields": {
               "text": {
@@ -18,12 +16,8 @@
             },
             "type": "keyword"
           },
-          "extension": {
-            "ignore_above": 1024,
-            "type": "keyword"
-          },
-          "fragment": {
-            "ignore_above": 1024,
+          "content_type": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -31,8 +25,8 @@
             },
             "type": "keyword"
           },
-          "full": {
-            "ignore_above": 8000,
+          "date": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -40,24 +34,8 @@
             },
             "type": "keyword"
           },
-          "meta": {
-            "properties": {
-              "has_non_ascii": {
-                "type": "boolean"
-              },
-              "has_whitespace": {
-                "type": "boolean"
-              },
-              "total_length": {
-                "type": "long"
-              },
-              "paths": {
-                "type": "long"
-              }
-            }
-          },
-          "original": {
-            "ignore_above": 8000,
+          "reply_to": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -65,11 +43,14 @@
             },
             "type": "keyword"
           },
-          "port": {
+          "request_body_length": {
             "type": "long"
           },
-          "path": {
-            "ignore_above": 1024,
+          "response_body_length": {
+            "type": "long"
+          },
+          "request_from": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -77,8 +58,8 @@
             },
             "type": "keyword"
           },
-          "query": {
-            "ignore_above": 1024,
+          "request_path": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -86,13 +67,8 @@
             },
             "type": "keyword"
           },
-          "scheme": {
-            "ignore_above": 1024,
-            "type": "keyword"
-          },
-          "username": {
-            "copy_to": "related.user",
-            "ignore_above": 1024,
+          "response_to": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -100,12 +76,41 @@
             },
             "type": "keyword"
           },
-          "password": {
-            "ignore_above": 1024,
+          "seq": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
             "type": "keyword"
           },
-          "variables": {
-            "ignore_above": 2048,
+          "status_code": {
+            "type": "long"
+          },
+          "status_msg": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "subject": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "trans_depth": {
+            "type": "long"
+          },
+          "warning": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"

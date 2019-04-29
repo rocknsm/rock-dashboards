@@ -1,211 +1,210 @@
 {
-  "ecs_bro": {
-    "order": 60,
-    "index_patterns": [
-      "ecs-*"
-    ],
-    "mappings": {
-      "properties": {
-        "dns": {
-          "properties": {
-            "additionals_count": {
-              "type": "long"
-            },
-            "additionals": {
-              "properties": {
-                "authoritative": {
-                  "properties": {
-                    "name": {
-                      "copy_to": "related.domain",
-                      "ignore_above": 8000,
-                      "fields": {
-                        "text": {
-                          "type": "text"
-                        }
-                      },
-                      "type": "keyword"
-                    }
-                  }
-                },
-                "name": {
-                  "copy_to": "related.domain",
-                  "ignore_above": 8000,
-                  "fields": {
-                    "text": {
-                      "type": "text"
-                    }
-                  },
-                  "type": "keyword"
-                },
-                "type": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                },
-                "ttl": {
-                  "type": "float"
-                }
-              }
-            },
-            "answers_count": {
-              "type": "long"
-            },
-            "answers": {
-              "properties": {
-                "class": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                },
-                "name": {
-                  "ignore_above": 8000,
-                  "fields": {
-                    "text": {
-                      "type": "text"
-                    }
-                  },
-                  "type": "keyword"
-                },
-                "type": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                },
-                "ttl": {
-                  "type": "float"
-                }
-              }
-            },
-            "authorities_count": {
-              "type": "long"
-            },
-            "authorities": {
-              "properties": {
-                "class": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                },
-                "name": {
-                  "copy_to": "related.domain",
-                  "ignore_above": 8000,
-                  "fields": {
-                    "text": {
-                      "type": "text"
-                    }
-                  },
-                  "type": "keyword"
-                },
-                "type": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                }
-              }
-            },
-            "flags": {
-              "properties": {
-                "authentic_data": {
-                  "type": "boolean"
-                },
-                "authoritative": {
-                  "type": "boolean"
-                },
-                "checking_disabled": {
-                  "type": "boolean"
-                },
-                "recursion_available": {
-                  "type": "boolean"
-                },
-                "recursion_desired": {
-                  "type": "boolean"
-                },
-                "rejected": {
-                  "type": "boolean"
-                },
-                "truncated_response": {
-                  "type": "boolean"
-                },
-                "z_bit": {
-                  "type": "long"
-                }
-              }
-            },
-            "meta": {
-              "properties": {
-                "answers": {
-                  "properties": {
-                    "hash": {
-                      "properities": {
-                        "sha1": {
-                          "ignore_above": 1024,
-                          "type": "keyword"
-                        }
+  "order": 20,
+  "index_patterns": [
+    "ecs-bro-network-dns-*",
+    "ecs-suricata-network-dns-*"
+  ],
+  "mappings": {
+    "properties": {
+      "dns": {
+        "properties": {
+          "additionals_count": {
+            "type": "long"
+          },
+          "additionals": {
+            "properties": {
+              "authoritative": {
+                "properties": {
+                  "name": {
+                    "copy_to": "related.domain",
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
                       }
                     },
-                    "has_non_ascii": {
-                      "type": "boolean"
-                    },
-                    "has_whitespace": {
-                      "type": "boolean"
-                    },
-                    "length": {
-                      "type": "long"
-                    },
-                    "total_length": {
-                      "type": "long"
+                    "type": "keyword"
+                  }
+                }
+              },
+              "name": {
+                "copy_to": "related.domain",
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "ttl": {
+                "type": "float"
+              }
+            }
+          },
+          "answers_count": {
+            "type": "long"
+          },
+          "answers": {
+            "properties": {
+              "class": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "ttl": {
+                "type": "float"
+              }
+            }
+          },
+          "authorities_count": {
+            "type": "long"
+          },
+          "authorities": {
+            "properties": {
+              "class": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "name": {
+                "copy_to": "related.domain",
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "flags": {
+            "properties": {
+              "authentic_data": {
+                "type": "boolean"
+              },
+              "authoritative": {
+                "type": "boolean"
+              },
+              "checking_disabled": {
+                "type": "boolean"
+              },
+              "recursion_available": {
+                "type": "boolean"
+              },
+              "recursion_desired": {
+                "type": "boolean"
+              },
+              "rejected": {
+                "type": "boolean"
+              },
+              "truncated_response": {
+                "type": "boolean"
+              },
+              "z_bit": {
+                "type": "long"
+              }
+            }
+          },
+          "meta": {
+            "properties": {
+              "answers": {
+                "properties": {
+                  "hash": {
+                    "properties": {
+                      "sha1": {
+                        "ignore_above": 1024,
+                        "type": "keyword"
+                      }
                     }
+                  },
+                  "has_non_ascii": {
+                    "type": "boolean"
+                  },
+                  "has_whitespace": {
+                    "type": "boolean"
+                  },
+                  "length": {
+                    "type": "long"
+                  },
+                  "total_length": {
+                    "type": "long"
                   }
                 }
               }
-            },
-            "op": {
-              "properties": {
-                "class": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                },
-                "class_code": {
-                  "type": "long"
-                }
-              }
-            },
-            "question": {
-              "properties": {
-                "name": {
-                  "ignore_above": 8000,
-                  "fields": {
-                    "text": {
-                      "type": "text"
-                    }
-                  },
-                  "type": "keyword"
-                },
-                "size": {
-                  "type": "long"
-                },
-                "type": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                },
-                "type_code": {
-                  "type": "long"
-                },
-                "etld_plus_one": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
-                }
-              }
-            },
-            "response_code": {
-              "ignore_above": 1024,
-              "type": "keyword"
-            },
-            "status_code": {
-              "type": "long"
-            },
-            "transaction_id": {
-              "ignore_above": 1024,
-              "type": "keyword"
-            },
-            "round_trip_time": {
-              "type": "float"
             }
+          },
+          "op": {
+            "properties": {
+              "class": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "class_code": {
+                "type": "long"
+              }
+            }
+          },
+          "question": {
+            "properties": {
+              "name": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "size": {
+                "type": "long"
+              },
+              "type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "type_code": {
+                "type": "long"
+              },
+              "etld_plus_one": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "response_code": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "status_code": {
+            "type": "long"
+          },
+          "transaction_id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "round_trip_time": {
+            "type": "float"
           }
         }
       }

@@ -1,6 +1,8 @@
 {
   "order": 20,
-  "index_patterns": [ "ecs-*" ],
+  "index_patterns": [
+    "ecs-*"
+  ],
   "version": 2019042401,
   "mappings": {
     "properties": {

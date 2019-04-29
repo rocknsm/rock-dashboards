@@ -1,6 +1,9 @@
 {
   "order": 20,
-  "index_patterns": [ "ecs-*" ],
+  "index_patterns": [
+    "ecs-bro-network-http-*",
+    "ecs-suricata-network-http-*"
+  ],
   "version": 2019042401,
   "mappings": {
     "properties": {

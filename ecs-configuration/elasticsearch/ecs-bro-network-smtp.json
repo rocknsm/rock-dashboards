@@ -1,0 +1,156 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-network-smtp-*"
+  ],
+  "mappings": {
+    "properties": {
+      "smtp": {
+        "properties": {
+          "cc": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "date": {
+            "type": "date"
+          },
+          "first_received": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "from": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "helo": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "in_reply_to": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "is_webmail": {
+            "type": "boolean"
+          },
+          "last_reply": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "mailfrom": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "msg_id": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "path": {
+            "type": "ip"
+          },
+          "rcptto": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "reply_to": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "second_received": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "subject": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "tls": {
+            "type": "boolean"
+          },
+          "to": {
+            "copy_to": "related.user",
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "trans_depth": {
+            "type": "long"
+          },
+          "x_originating_ip": {
+            "type": "ip"
+          }
+        }
+      }
+    }
+  }
+}

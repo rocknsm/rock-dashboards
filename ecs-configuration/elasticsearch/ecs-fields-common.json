@@ -1,6 +1,8 @@
 {
   "order": 10,
-  "index_patterns": [ "ecs-*" ],
+  "index_patterns": [
+    "ecs-*"
+  ],
   "version": 2019042301,
   "settings": {
     "index": {

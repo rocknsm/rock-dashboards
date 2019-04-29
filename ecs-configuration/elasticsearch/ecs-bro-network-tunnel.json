@@ -1,0 +1,32 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-bro-network-tunnel-*"
+  ],
+  "mappings": {
+    "properties": {
+      "tunnel": {
+        "properties": {
+          "action": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "tunnel_type": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
