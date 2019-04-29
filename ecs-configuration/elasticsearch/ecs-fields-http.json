@@ -4,7 +4,7 @@
     "ecs-bro-network-http-*",
     "ecs-suricata-network-http-*"
   ],
-  "version": 2019042401,
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "http": {

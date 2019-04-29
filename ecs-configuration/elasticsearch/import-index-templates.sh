@@ -13,15 +13,15 @@ failed=0
 ok=0
 
 for item in *.json; do
-  name=$(cat ${item} | jq -r 'keys | .[]')
-  version=$(cat ${item} | jq -r ".${name}.version")
+  template_name=$(echo ${item} | sed -r ' s/\.json$//')
+  version=$(cat ${item} | jq -r ".version")
 
   existing_version='-1'
   # Check if template already exists
-  if curl -sI "${ES_URL}/_template/${name}" | grep -q "200 OK"; then
+  if curl -sI "${ES_URL}/_template/${template_name}" | grep -q "200 OK"; then
     existing_version=$(
-      curl -s "${ES_URL}/_template/${name}?filter_path=*.version" | \
-      jq -r ".${name}.version"
+      curl -s "${ES_URL}/_template/${template_name}?filter_path=*.version" | \
+      jq -r ".version"
     )
     if ! is_integer ${existing_version}; then
       existing_version=-1
@@ -29,14 +29,14 @@ for item in *.json; do
   fi
 
   if [[ "${version}" -gt "${existing_version}" ]]; then
-    echo "Installing index mapping template: ${name} version ${version}" >/dev/stderr
-    response=$(curl -s -XPUT "${ES_URL}/_template/${name}" -H "Content-Type: application/json" --data "$(cat ${item} | jq ".${name}")")
+    echo "Installing index mapping template: ${template_name} version ${version}" >/dev/stderr
+    response=$(curl -s -XPUT "${ES_URL}/_template/${template_name}" -H "Content-Type: application/json" --data "@${item}")
     result=$(echo ${response} | jq -r '.acknowledged')
     if [ "${result}" == "true" ]; then
       changed=$[$changed + 1]
     else
       failed=$[$failed + 1]
-      echo "Failed putting ${name} version ${version}: \n ${response}" > /dev/null
+      echo "Failed putting ${template_name} version ${version}: \n ${response}"
     fi
   else
     ok=$[$ok + 1]

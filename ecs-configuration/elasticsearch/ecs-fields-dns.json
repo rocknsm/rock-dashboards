@@ -4,6 +4,7 @@
     "ecs-bro-network-dns-*",
     "ecs-suricata-network-dns-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "dns": {

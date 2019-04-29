@@ -3,6 +3,7 @@
   "index_patterns": [
     "ecs-bro-miscellaneous-weird-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "weird": {

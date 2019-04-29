@@ -1,0 +1,79 @@
+{
+  "order": 0,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019042901,
+  "settings": {
+    "index": {
+      "mapping": {
+        "coerce": true,
+        "ignore_malformed": true,
+        "total_fields.limit": 5000
+      },
+      "refresh_interval": "10s"
+    },
+    "number_of_shards": "1",
+    "number_of_replicas": "0"
+  },
+  "mappings": {
+    "date_detection": false,
+    "dynamic_templates": [
+      {
+
+        "strings_as_keyword": {
+          "match_mapping_type": "string",
+          "mapping": {
+            "ignore_above": 4096,
+            "type": "keyword",
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      {
+        "numeric_long_fields": {
+          "match_mapping_type": "long",
+          "mapping": {
+            "type": "long",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      {
+        "numeric_double_fields": {
+          "match_mapping_type": "double",
+          "mapping": {
+            "type": "double",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      {
+        "boolean_fields": {
+          "match_mapping_type": "boolean",
+          "mapping": {
+            "type": "boolean",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aliases": {}
+}

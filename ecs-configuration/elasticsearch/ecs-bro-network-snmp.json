@@ -3,6 +3,7 @@
   "index_patterns": [
     "ecs-bro-network-snmp-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "snmp": {

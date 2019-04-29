@@ -3,6 +3,7 @@
   "index_patterns": [
     "ecs-bro-detection-intel-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "intel": {

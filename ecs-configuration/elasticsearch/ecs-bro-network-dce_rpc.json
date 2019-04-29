@@ -3,6 +3,7 @@
   "index_patterns": [
     "ecs-bro-network-dce_rpc-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "dce_rpc": {

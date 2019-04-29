@@ -3,6 +3,7 @@
   "index_patterns": [
     "ecs-bro-network-ntlm-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "ntlm": {

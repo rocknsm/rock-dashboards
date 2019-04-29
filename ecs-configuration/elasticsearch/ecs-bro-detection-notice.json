@@ -3,6 +3,7 @@
   "index_patterns": [
     "ecs-bro-detection-notice-*"
   ],
+  "version": 2019042901,
   "mappings": {
     "properties": {
       "notice": {
@@ -48,27 +49,26 @@
               }
             },
             "type": "keyword"
-          }
-        },
-        "number": {
-          "type": "long"
-        },
-        "peer_description": {
-          "ignore_above": 1024,
-          "type": "keyword"
-        },
-        "sub_message": {
-          "ignore_above": 1024,
-          "fields": {
-            "text": {
-              "type": "text"
-            }
           },
-          "type": "keyword"
-        }
-      },
-        "supress_duration": {
-          "type": "long"
+          "number": {
+            "type": "long"
+          },
+          "peer_description": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "sub_message": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "supress_duration": {
+            "type": "long"
+          }
         }
       }
     }
