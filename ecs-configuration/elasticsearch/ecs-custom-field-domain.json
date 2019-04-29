@@ -1,0 +1,166 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-bro-network-dns-*",
+    "ecs-bro-network-http-*",
+    "ecs-bro-network-ssl-*",
+    "ecs-suricata-network-dns-*",
+    "ecs-suricata-network-http-*",
+    "ecs-suricata-network-ssl-*"
+  ],
+  "settings": {
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "on_dots": {
+            "filter": "lowercase",
+            "type": "custom",
+            "tokenizer": "dots_tokenizer"
+          }
+        },
+        "tokenizer": {
+          "dots_tokenizer": {
+            "pattern": "\\.",
+            "type": "pattern"
+          }
+        }
+      }
+    }
+  },
+  "version": 2019042901,
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "domain_level_length": {
+          "path_match": "domain.level_*.length",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "domain_level_name": {
+          "path_match": "domain.level_*.name",
+          "mapping": {
+            "type": "keyword"
+          }
+        }
+      },
+      {
+        "domain_level_vowels": {
+          "path_match": "domain.level_*.vowels",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "domain_level_letters": {
+          "path_match": "domain.level_*.letters",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "domain_level_consonants": {
+          "path_match": "domain.level_*.consonants",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "domain_level_punctuation": {
+          "path_match": "domain.level_*.punctuation",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "domain_level_digits": {
+          "path_match": "domain.level_*.digits",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      },
+      {
+        "domain_level_hex": {
+          "path_match": "domain.level_*.hex",
+          "mapping": {
+            "type": "long"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "domain": {
+        "properties": {
+          "1n2_name": {
+            "ignore_above": 2048,
+            "type": "keyword"
+          },
+          "1n2n3_name": {
+            "ignore_above": 2048,
+            "type": "keyword"
+          },
+          "has_dot": {
+            "type": "boolean"
+          },
+          "has_non_ascii": {
+            "type": "boolean"
+          },
+          "has_whitespace": {
+            "type": "boolean"
+          },
+          "is_idn": {
+            "type": "boolean"
+          },
+          "total": {
+            "properties": {
+              "consonants": {
+                "type": "long"
+              },
+              "digits": {
+                "type": "long"
+              },
+              "hex": {
+                "type": "long"
+              },
+              "length": {
+                "type": "long"
+              },
+              "letters": {
+                "type": "long"
+              },
+              "levels": {
+                "type": "long"
+              },
+              "punctuation": {
+                "type": "long"
+              },
+              "vowels": {
+                "type": "long"
+              }
+            }
+          },
+          "name": {
+            "ignore_above": 8000,
+            "fields": {
+              "on_dots": {
+                "analyzer": "on_dots",
+                "type": "text"
+              },
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
