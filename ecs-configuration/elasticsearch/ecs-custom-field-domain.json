@@ -42,6 +42,7 @@
         "domain_level_name": {
           "path_match": "domain.level_*.name",
           "mapping": {
+            "ignore_above": 1024,
             "type": "keyword"
           }
         }
@@ -99,12 +100,142 @@
       "domain": {
         "properties": {
           "1n2_name": {
+            "eager_global_ordinals": true,
             "ignore_above": 2048,
             "type": "keyword"
           },
           "1n2n3_name": {
             "ignore_above": 2048,
             "type": "keyword"
+          },
+          "level_1": {
+            "properties": {
+              "consonants": {
+                "type": "long"
+              },
+              "digits": {
+                "type": "long"
+              },
+              "hex": {
+                "type": "long"
+              },
+              "length": {
+                "type": "long"
+              },
+              "letters": {
+                "type": "long"
+              },
+              "levels": {
+                "type": "long"
+              },
+              "name": {
+                "eager_global_ordinals": true,
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "punctuation": {
+                "type": "long"
+              },
+              "vowels": {
+                "type": "long"
+              }
+            }
+          },
+          "level_2": {
+            "properties": {
+              "consonants": {
+                "type": "long"
+              },
+              "digits": {
+                "type": "long"
+              },
+              "hex": {
+                "type": "long"
+              },
+              "length": {
+                "type": "long"
+              },
+              "letters": {
+                "type": "long"
+              },
+              "levels": {
+                "type": "long"
+              },
+              "name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "punctuation": {
+                "type": "long"
+              },
+              "vowels": {
+                "type": "long"
+              }
+            }
+          },
+          "level_3": {
+            "properties": {
+              "consonants": {
+                "type": "long"
+              },
+              "digits": {
+                "type": "long"
+              },
+              "hex": {
+                "type": "long"
+              },
+              "length": {
+                "type": "long"
+              },
+              "letters": {
+                "type": "long"
+              },
+              "levels": {
+                "type": "long"
+              },
+              "name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "punctuation": {
+                "type": "long"
+              },
+              "vowels": {
+                "type": "long"
+              }
+            }
+          },
+          "level_4": {
+            "properties": {
+              "consonants": {
+                "type": "long"
+              },
+              "digits": {
+                "type": "long"
+              },
+              "hex": {
+                "type": "long"
+              },
+              "length": {
+                "type": "long"
+              },
+              "letters": {
+                "type": "long"
+              },
+              "levels": {
+                "type": "long"
+              },
+              "name": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "punctuation": {
+                "type": "long"
+              },
+              "vowels": {
+                "type": "long"
+              }
+            }
           },
           "has_dot": {
             "type": "boolean"
