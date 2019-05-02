@@ -20,8 +20,8 @@
     "date_detection": false,
     "dynamic_templates": [
       {
-        "all_fields": {
-          "match_mapping_type": "*",
+        "string_fields": {
+          "match_mapping_type": "string",
           "mapping": {
             "index": true,
             "analyzer": "keyword",
