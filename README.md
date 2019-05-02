@@ -31,9 +31,14 @@ cd ../kibana
 
 # Install Logstash configs and restart
 cd ../logstash
+sudo systemctl stop logstash
+# Backing up your old logstash configs, ECS is completely different and merging the two is not logical
+sudo mv /etc/logstash/conf.d{,.BAK} 
+sudo mkdir /etc/logstash/conf.d/
 sudo cp -a conf.d/*.conf /etc/logstash/conf.d/
 sudo mkdir -p /etc/logstash/ruby
 sudo cp -a ruby/*.rb /etc/logstash/ruby/
+sudo chown -R logstash:logstash /etc/logstash/conf.d/ /etc/logstash/ruby/
 sudo systemctl restart logstash
 ```
 
