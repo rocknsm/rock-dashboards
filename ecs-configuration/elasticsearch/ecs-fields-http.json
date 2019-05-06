@@ -30,12 +30,22 @@
                   },
                   "content": {
                     "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
                     "type": "keyword"
                   }
                 }
               },
               "header_names": {
                 "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               },
               "method": {
@@ -44,6 +54,11 @@
               },
               "mime_type": {
                 "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               },
               "origin": {
@@ -52,10 +67,20 @@
               },
               "proxied": {
                 "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               },
               "referrer": {
                 "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               }
             }
@@ -72,12 +97,22 @@
                   },
                   "content": {
                     "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
                     "type": "keyword"
                   }
                 }
               },
               "header_names": {
                 "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               },
               "informational_code": {
@@ -89,6 +124,11 @@
               },
               "mime_type": {
                 "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
                 "type": "keyword"
               },
               "status_code": {
