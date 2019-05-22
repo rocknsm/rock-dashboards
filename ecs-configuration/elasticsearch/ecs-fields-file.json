@@ -12,14 +12,27 @@
             "type": "date"
           },
           "changed": {
-            "type": "date"
+            "type": "alias",
+            "path": "file.ctime"
           },
           "created": {
+            "type": "date"
+          },
+          "ctime": {
             "type": "date"
           },
           "device": {
             "copy_to": "related.domain",
             "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "directory": {
+            "ignore_above": 4096,
             "fields": {
               "text": {
                 "type": "text"
@@ -86,8 +99,12 @@
             "ignore_above": 1024,
             "type": "keyword"
           },
-          "modified": {
+          "mtime": {
             "type": "date"
+          },
+          "modified": {
+            "type": "alias",
+            "path": "file.mtime"
           },
           "mime_type": {
             "ignore_above": 8000,
