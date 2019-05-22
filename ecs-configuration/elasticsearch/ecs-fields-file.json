@@ -3,18 +3,18 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019042901,
+  "version": 2019052201,
   "mappings": {
     "properties": {
       "file": {
         "properties": {
-          "atime": {
+          "accessed": {
             "type": "date"
           },
-          "crtime": {
+          "changed": {
             "type": "date"
           },
-          "ctime": {
+          "created": {
             "type": "date"
           },
           "device": {
@@ -86,7 +86,7 @@
             "ignore_above": 1024,
             "type": "keyword"
           },
-          "mtime": {
+          "modified": {
             "type": "date"
           },
           "mime_type": {
