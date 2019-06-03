@@ -173,6 +173,7 @@ def filter(event)
         ip_address_check = IPAddr.new(ip_address)
         # Public IP Check
         ip_public = true
+        temp_ip_check = "zDamTyILGeKD4H0.IbPK6g"
         IPv6Privatecidr.each do |i_p|
           cidr = IPAddr.new(i_p)
           if cidr.include?(ip_address_check)
