@@ -17,7 +17,7 @@ for item in index-pattern search visualization dashboard; do
         fi
 
         echo "Exporting ${item} named ${id} as ${id}.json" > /dev/stderr
-        curl -s "${KIBANA_URL}/api/saved_objects/${item}/${id}" | jq  '.attributes' > "${id}.json"
+        curl -s "${KIBANA_URL}/api/saved_objects/${item}/${id}" | jq ''  > "${id}.json"
         echo -n "\"${id}\"" >> index.json
 
     done

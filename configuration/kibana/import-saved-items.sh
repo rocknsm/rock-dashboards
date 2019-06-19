@@ -14,14 +14,16 @@ for item in index-pattern search visualization dashboard; do
             curl -s -XPOST \
                 -H"kbn-xsrf: true" \
                 -H"Content-Type: application/json" \
-                "${KIBANA_URL}/api/saved_objects/${item}/${id}" -d"{\"attributes\": $(cat ${id}.json)}" > /dev/null
+                "${KIBANA_URL}/api/saved_objects/${item}/${id}" \
+                -d"{\"attributes\": $(cat ${id}.json | jq '.attributes'),\"references\": $(cat ${id}.json | jq '.references')}" > /dev/null
         else
             # object already exists, apply update
             echo "Overwriting ${item} named ${id}" > /dev/stderr
             curl -s -XPUT \
-		-H"kbn-xsrf: true" \
+                -H"kbn-xsrf: true" \
                 -H"Content-Type: application/json" \
-                "${KIBANA_URL}/api/saved_objects/${item}/${id}?overwrite=true" -d"{\"attributes\": $(cat ${id}.json)}" > /dev/null
+                "${KIBANA_URL}/api/saved_objects/${item}/${id}?overwrite=true" \
+                -d"{\"attributes\": $(cat ${id}.json | jq '.attributes'),\"references\": $(cat ${id}.json | jq '.references')}" > /dev/null
         fi
     done
     cd ..
@@ -32,4 +34,4 @@ defaultIndex=$(jq -r '.userValue' index-pattern/default.json)
 
 echo "Setting defaultIndex to ${defaultIndex}" > /dev/stderr
 curl -s -XPOST -H"kbn-xsrf: true" -H"Content-Type: application/json" \
-	"${KIBANA_URL}/api/kibana/settings/defaultIndex" -d"{\"value\": \"${defaultIndex}\"}" >/dev/null
+    "${KIBANA_URL}/api/kibana/settings/defaultIndex" -d"{\"value\": \"${defaultIndex}\"}" >/dev/null
