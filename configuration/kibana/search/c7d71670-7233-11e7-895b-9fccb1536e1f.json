@@ -1,19 +1,35 @@
 {
-  "title": "SMTP to Files Search",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "smtp.fuids",
-    "files.mime_type",
-    "files.filename",
-    "files.total_bytes"
+  "id": "c7d71670-7233-11e7-895b-9fccb1536e1f",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:29.120Z",
+  "version": "WzcyNSwyXQ==",
+  "attributes": {
+    "title": "SMTP to Files Search",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "smtp.fuids",
+      "files.mime_type",
+      "files.filename",
+      "files.total_bytes"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: (smtp OR files)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"filter\":[],\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: (smtp OR files)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"}}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }

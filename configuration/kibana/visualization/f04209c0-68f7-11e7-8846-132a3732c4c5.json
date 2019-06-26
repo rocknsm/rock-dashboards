@@ -1,10 +1,26 @@
 {
-  "title": "HTTP Originating Port",
-  "visState": "{\"title\":\"HTTP Originating Port\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"http.id_orig_p\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"HTTP Originating Port\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":0,\"direction\":null}}}}",
-  "description": "",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  "id": "f04209c0-68f7-11e7-8846-132a3732c4c5",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:42.326Z",
+  "version": "Wzc5OSwyXQ==",
+  "attributes": {
+    "title": "HTTP Originating Port",
+    "visState": "{\"title\":\"HTTP Originating Port\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false,\"showTotal\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"http.id_orig_p\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"HTTP Originating Port\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":0,\"direction\":null}}}}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

@@ -1,11 +1,27 @@
 {
-  "title": "STATS - Total Kernel Packets",
-  "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Total Kernel Packets\",\"field\":\"stats.capture.kernel_packets\"},\"schema\":\"metric\",\"type\":\"sum\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"STATS - Total Kernel Packets\",\"type\":\"metric\"}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "d2357e20-2900-11e8-ae88-194355312858",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+  "id": "11a89c00-47dc-11e8-bb80-b7240cd6c2af",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:12.776Z",
+  "version": "Wzk3NiwyXQ==",
+  "attributes": {
+    "title": "STATS - Total Kernel Packets",
+    "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customLabel\":\"Total Kernel Packets\",\"field\":\"stats.capture.kernel_packets\"},\"schema\":\"metric\",\"type\":\"sum\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"STATS - Total Kernel Packets\",\"type\":\"metric\"}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "d2357e20-2900-11e8-ae88-194355312858"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

@@ -1,10 +1,26 @@
 {
-  "title": "FTP User",
-  "visState": "{\"title\":\"FTP User\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ftp.user\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"FTP User\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-  "description": "",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  "id": "0d8045d0-7bca-11e7-b629-a97b0307bf20",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:46.376Z",
+  "version": "WzgxOCwyXQ==",
+  "attributes": {
+    "title": "FTP User",
+    "visState": "{\"title\":\"FTP User\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ftp.user\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"FTP User\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

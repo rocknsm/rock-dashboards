@@ -1,10 +1,20 @@
 {
-  "title": "Divider",
-  "visState": "{\"title\":\"Divider\",\"type\":\"markdown\",\"params\":{\"markdown\":\"# ------------------------------------------------------------------------------------------------------------------------------------------------------------------\"},\"aggs\":[],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+  "id": "c2077bf0-2b83-11e7-9bd2-f79414ed404d",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:33.201Z",
+  "version": "Wzc0NCwyXQ==",
+  "attributes": {
+    "title": "Divider",
+    "visState": "{\"title\":\"Divider\",\"type\":\"markdown\",\"params\":{\"markdown\":\"# ------------------------------------------------------------------------------------------------------------------------------------------------------------------\"},\"aggs\":[],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+    }
+  },
+  "references": [],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

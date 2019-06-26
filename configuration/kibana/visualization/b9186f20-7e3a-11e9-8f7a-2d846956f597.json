@@ -1,0 +1,20 @@
+{
+  "id": "b9186f20-7e3a-11e9-8f7a-2d846956f597",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:33.198Z",
+  "version": "Wzc0MywyXQ==",
+  "attributes": {
+    "title": "timelion",
+    "visState": "{\"title\":\"timelion\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=bro-*).trend(mode='linear')\",\"interval\":\"1s\"},\"aggs\":[]}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+    }
+  },
+  "references": [],
+  "migrationVersion": {
+    "visualization": "7.0.1"
+  }
+}

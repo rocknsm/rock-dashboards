@@ -1,11 +1,27 @@
 {
-  "title": "STAT - Packet Lag",
-  "visState": "{\"title\":\"STAT - Packet Lag\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.pkt_lag\",\"customLabel\":\"Packet Lag\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "stats",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "stat-packet-lag",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:07.709Z",
+  "version": "Wzk0OCwyXQ==",
+  "attributes": {
+    "title": "STAT - Packet Lag",
+    "visState": "{\"title\":\"STAT - Packet Lag\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.pkt_lag\",\"customLabel\":\"Packet Lag\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "stats"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

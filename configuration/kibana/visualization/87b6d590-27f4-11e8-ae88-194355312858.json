@@ -1,11 +1,27 @@
 {
-  "title": "DNS - Responding Hosts",
-  "visState": "{\"title\":\"DNS - Responding Hosts\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"dns.id_resp_h\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":9,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"DNS Responding Host\"}}]}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "8507c2f0-2024-11e8-82ea-3daef40316d8",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+  "id": "87b6d590-27f4-11e8-ae88-194355312858",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:04.653Z",
+  "version": "WzkyNywyXQ==",
+  "attributes": {
+    "title": "DNS - Responding Hosts",
+    "visState": "{\"title\":\"DNS - Responding Hosts\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"dns.id_resp_h\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":9,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"DNS Responding Host\"}}]}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "8507c2f0-2024-11e8-82ea-3daef40316d8"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

@@ -1,10 +1,26 @@
 {
-  "title": "HTTP Logs w/out User Agent",
-  "visState": "{\"title\":\"HTTP Logs w/out User Agent\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"25\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"No User Agent\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: http AND NOT _exists_: http.user_agent\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  "id": "b853cea0-6d79-11e7-a5c1-7f61e33a4d89",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:44.358Z",
+  "version": "WzgxMSwyXQ==",
+  "attributes": {
+    "title": "HTTP Logs w/out User Agent",
+    "visState": "{\"title\":\"HTTP Logs w/out User Agent\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"25\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"No User Agent\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream: http AND NOT _exists_: http.user_agent\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

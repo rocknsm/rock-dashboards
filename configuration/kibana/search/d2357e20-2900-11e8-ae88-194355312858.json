@@ -1,22 +1,38 @@
 {
-  "title": "Suricata - Stats",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "stats.capture.kernel_drops",
-    "stats.capture.kernel_packets",
-    "stats.decoder.pkts",
-    "stats.decoder.ethernet",
-    "stats.decoder.vlan",
-    "stats.decoder.erspan",
-    "stats.decoder.gre"
+  "id": "d2357e20-2900-11e8-ae88-194355312858",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:26.460Z",
+  "version": "WzcwNSwyXQ==",
+  "attributes": {
+    "title": "Suricata - Stats",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "stats.capture.kernel_drops",
+      "stats.capture.kernel_packets",
+      "stats.decoder.pkts",
+      "stats.decoder.ethernet",
+      "stats.decoder.vlan",
+      "stats.decoder.erspan",
+      "stats.decoder.gre"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event_type: stats\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "f5a904b0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"b6c2fb00-1fea-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event_type: stats\"},\"filter\":[]}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }

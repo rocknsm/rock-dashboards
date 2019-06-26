@@ -1,18 +1,34 @@
 {
-  "title": "HTTP Host and User Agent",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "http.method",
-    "http.host",
-    "http.user_agent"
+  "id": "34e42cb0-7d3f-11e7-bb02-a1e09360c6cb",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:27.089Z",
+  "version": "WzcxMywyXQ==",
+  "attributes": {
+    "title": "HTTP Host and User Agent",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "http.method",
+      "http.host",
+      "http.user_agent"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream:http AND _exists_:(http.host AND http.user_agent)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":{\"query_string\":{\"query\":\"@meta.stream:http AND _exists_:(http.host AND http.user_agent)\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[]}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }

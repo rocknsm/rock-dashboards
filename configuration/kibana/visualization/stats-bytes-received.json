@@ -1,11 +1,27 @@
 {
-  "title": "STATS - Bytes Received",
-  "visState": "{\"title\":\"STATS - Bytes Received\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.bytes_recv\",\"customLabel\":\"Bytes Received\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "stats",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "stats-bytes-received",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:12.772Z",
+  "version": "Wzk3NSwyXQ==",
+  "attributes": {
+    "title": "STATS - Bytes Received",
+    "visState": "{\"title\":\"STATS - Bytes Received\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.bytes_recv\",\"customLabel\":\"Bytes Received\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "stats"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

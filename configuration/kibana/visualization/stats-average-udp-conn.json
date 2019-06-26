@@ -1,11 +1,27 @@
 {
-  "title": "STATS - Average UDP Conn",
-  "visState": "{\"title\":\"STATS - Average UDP Conn\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.udp_conns\",\"customLabel\":\"Average UDP Conn/min\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "stats",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "stats-average-udp-conn",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:12.769Z",
+  "version": "Wzk3NCwyXQ==",
+  "attributes": {
+    "title": "STATS - Average UDP Conn",
+    "visState": "{\"title\":\"STATS - Average UDP Conn\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.udp_conns\",\"customLabel\":\"Average UDP Conn/min\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "stats"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

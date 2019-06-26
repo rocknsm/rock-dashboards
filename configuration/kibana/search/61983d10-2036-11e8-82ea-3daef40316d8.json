@@ -1,27 +1,43 @@
 {
-  "title": "Bro - HTTP",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "http.id_orig_h",
-    "http.id_orig_p",
-    "http.id_resp_h",
-    "http.id_resp_p",
-    "http.method",
-    "http.host",
-    "http.uri",
-    "http.referrer",
-    "http.status_code",
-    "http.status_msg",
-    "http.user_agent",
-    "http.version"
+  "id": "61983d10-2036-11e8-82ea-3daef40316d8",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:27.083Z",
+  "version": "WzcwOSwyXQ==",
+  "attributes": {
+    "title": "Bro - HTTP",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "http.id_orig_h",
+      "http.id_orig_p",
+      "http.id_resp_h",
+      "http.id_resp_p",
+      "http.method",
+      "http.host",
+      "http.uri",
+      "http.referrer",
+      "http.status_code",
+      "http.status_msg",
+      "http.user_agent",
+      "http.version"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"@meta.stream: http\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"@meta.stream: http\",\"language\":\"lucene\"},\"filter\":[]}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }

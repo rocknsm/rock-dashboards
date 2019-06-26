@@ -1,16 +1,32 @@
 {
-  "title": "Signatures",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "_source"
+  "id": "6bccb450-4755-11e8-bb80-b7240cd6c2af",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:26.474Z",
+  "version": "WzcwNywyXQ==",
+  "attributes": {
+    "title": "Signatures",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "_source"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"alert.signature: * fields: alert.signature\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "f5a904b0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"b6c2fb00-1fea-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"alert.signature: * fields: alert.signature\",\"language\":\"lucene\"},\"filter\":[]}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }
