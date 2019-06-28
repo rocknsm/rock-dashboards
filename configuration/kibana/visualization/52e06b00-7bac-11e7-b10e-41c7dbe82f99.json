@@ -1,10 +1,20 @@
 {
-  "title": "HTTP Stats",
-  "visState": "{\"title\":\"HTTP Stats\",\"type\":\"metrics\",\"params\":{\"id\":\"81963b60-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"top_n\",\"series\":[{\"id\":\"81963b61-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"rgba(0,98,177,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"81963b62-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http\",\"label\":\"Total HTTP Logs\"},{\"id\":\"b09e06e0-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"#68BC00\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b09e06e1-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http AND !_exists_:http.referrer\",\"label\":\"No Referrer\"},{\"id\":\"b18d6ff0-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"rgba(252,196,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b18d6ff1-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http AND !_exists_: http.user_agent\",\"label\":\"No User Agent\"},{\"id\":\"b2278d10-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"rgba(22,165,165,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b2278d11-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http AND !_exists_: http.host\",\"label\":\"No Host\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"83434f20-7bab-11e7-b10e-41c7dbe82f99\"}]},\"aggs\":[],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+  "id": "52e06b00-7bac-11e7-b10e-41c7dbe82f99",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:33.204Z",
+  "version": "Wzc0NSwyXQ==",
+  "attributes": {
+    "title": "HTTP Stats",
+    "visState": "{\"title\":\"HTTP Stats\",\"type\":\"metrics\",\"params\":{\"id\":\"81963b60-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"top_n\",\"series\":[{\"id\":\"81963b61-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"rgba(0,98,177,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"81963b62-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http\",\"label\":\"Total HTTP Logs\"},{\"id\":\"b09e06e0-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"#68BC00\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b09e06e1-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http AND !_exists_:http.referrer\",\"label\":\"No Referrer\"},{\"id\":\"b18d6ff0-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"rgba(252,196,0,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b18d6ff1-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http AND !_exists_: http.user_agent\",\"label\":\"No User Agent\"},{\"id\":\"b2278d10-7bab-11e7-b10e-41c7dbe82f99\",\"color\":\"rgba(22,165,165,1)\",\"split_mode\":\"filter\",\"metrics\":[{\"id\":\"b2278d11-7bab-11e7-b10e-41c7dbe82f99\",\"type\":\"count\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"@meta.stream\",\"filter\":\"@meta.stream:http AND !_exists_: http.host\",\"label\":\"No Host\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"bar_color_rules\":[{\"id\":\"83434f20-7bab-11e7-b10e-41c7dbe82f99\"}]},\"aggs\":[],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\"}},\"language\":\"lucene\"},\"filter\":[]}"
+    }
+  },
+  "references": [],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

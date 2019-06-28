@@ -1,11 +1,27 @@
 {
-  "title": "STATS - Max Packets Dropped",
-  "visState": "{\"title\":\"STATS - Max Packets Dropped\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.pkts_dropped\",\"customLabel\":\"Max Packets Dropped/min\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "stats",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "stats-max-packets-dropped",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:09.724Z",
+  "version": "Wzk1OSwyXQ==",
+  "attributes": {
+    "title": "STATS - Max Packets Dropped",
+    "visState": "{\"title\":\"STATS - Max Packets Dropped\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.pkts_dropped\",\"customLabel\":\"Max Packets Dropped/min\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "stats"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

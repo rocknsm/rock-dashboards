@@ -1,11 +1,27 @@
 {
-  "title": "CONN - Responding Bytes by Location",
-  "visState": "{\"title\":\"CONN - Responding Bytes by Location\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{\"_c\":[],\"_s\":2,\"_d\":true,\"_v\":{},\"_h\":1,\"_n\":false}},\"colorSchema\":\"Yellow to Red\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"conn.resp_bytes\",\"customLabel\":\"Responding Bytes\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"@meta.geoip_resp.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"mapZoom\":0,\"mapCenter\":{\"lon\":43.06640625000001,\"lat\":-78.31385955743478},\"mapBounds\":{\"bottom_right\":{\"lat\":-89.99999997284162,\"lon\":1238.9062500000002},\"top_left\":{\"lat\":89.99999745402569,\"lon\":-1153.1250000000002}},\"precision\":2,\"customLabel\":\"\"}}]}",
-  "uiStateJSON": "{\"mapZoom\":3,\"mapCenter\":[22.18105207997494,13.81499995943159]}",
-  "description": "",
-  "savedSearchId": "009f6e00-2024-11e8-82ea-3daef40316d8",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+  "id": "30399c90-27c6-11e8-ae88-194355312858",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:02.611Z",
+  "version": "WzkxNiwyXQ==",
+  "attributes": {
+    "title": "CONN - Responding Bytes by Location",
+    "visState": "{\"title\":\"CONN - Responding Bytes by Location\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true},\"baseLayersAreLoaded\":{\"_c\":[],\"_s\":2,\"_d\":true,\"_v\":{},\"_h\":1,\"_n\":false}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"conn.resp_bytes\",\"customLabel\":\"Responding Bytes\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"@meta.geoip_resp.location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":1,\"customLabel\":\"\"}}]}",
+    "uiStateJSON": "{\"mapZoom\":0,\"mapCenter\":[-78.34941069014627,43.06640625000001]}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "009f6e00-2024-11e8-82ea-3daef40316d8"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

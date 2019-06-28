@@ -1,11 +1,27 @@
 {
-  "title": "SSL - Responding Port",
-  "visState": "{\"title\":\"SSL - Responding Port\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ssl.id_resp_p\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Responding Port\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "ssl",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "ssl-responding-port",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:11.757Z",
+  "version": "Wzk3MiwyXQ==",
+  "attributes": {
+    "title": "SSL - Responding Port",
+    "visState": "{\"title\":\"SSL - Responding Port\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ssl.id_resp_p\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Responding Port\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "ssl"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

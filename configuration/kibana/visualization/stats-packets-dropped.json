@@ -1,11 +1,27 @@
 {
-  "title": "STATS - Packets Dropped",
-  "visState": "{\"title\":\"STATS - Packets Dropped\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.pkts_dropped\",\"customLabel\":\"Packets Dropped\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "stats",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "stats-packets-dropped",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:09.723Z",
+  "version": "Wzk1OCwyXQ==",
+  "attributes": {
+    "title": "STATS - Packets Dropped",
+    "visState": "{\"title\":\"STATS - Packets Dropped\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.pkts_dropped\",\"customLabel\":\"Packets Dropped\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "stats"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

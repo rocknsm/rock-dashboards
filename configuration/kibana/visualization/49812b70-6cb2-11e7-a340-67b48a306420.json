@@ -1,10 +1,31 @@
 {
-  "title": "DNS Answers",
-  "visState": "{\"title\":\"DNS Answers\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"dns.answers\",\"size\":8000,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
-  "description": "",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"bro-*\",\"key\":\"dns.query\",\"value\":\"tags.bluekai.com\",\"disabled\":false,\"negate\":true,\"alias\":null},\"query\":{\"match\":{\"dns.query\":{\"query\":\"tags.bluekai.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+  "id": "49812b70-6cb2-11e7-a340-67b48a306420",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:45:48.408Z",
+  "version": "WzgzNCwyXQ==",
+  "attributes": {
+    "title": "DNS Answers",
+    "visState": "{\"title\":\"DNS Answers\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"dns.answers\",\"size\":8000,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"query\":{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"key\":\"dns.query\",\"value\":\"tags.bluekai.com\",\"disabled\":false,\"negate\":true,\"alias\":null,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"dns.query\":{\"query\":\"tags.bluekai.com\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    },
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+      "type": "index-pattern",
+      "id": "bro-*"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

@@ -1,26 +1,42 @@
 {
-  "title": "Bro - Connections",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "conn.id_orig_h",
-    "conn.id_orig_p",
-    "conn.id_resp_h",
-    "conn.id_resp_p",
-    "conn.service",
-    "Docket PCAP",
-    "conn.duration",
-    "conn.orig_pkts",
-    "conn.orig_bytes",
-    "conn.resp_pkts",
-    "conn.resp_bytes"
+  "id": "009f6e00-2024-11e8-82ea-3daef40316d8",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:28.102Z",
+  "version": "WzcxNiwyXQ==",
+  "attributes": {
+    "title": "Bro - Connections",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "conn.id_orig_h",
+      "conn.id_orig_p",
+      "conn.id_resp_h",
+      "conn.id_resp_p",
+      "conn.service",
+      "Docket PCAP",
+      "conn.duration",
+      "conn.orig_pkts",
+      "conn.orig_bytes",
+      "conn.resp_pkts",
+      "conn.resp_bytes"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: conn\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: conn\"},\"filter\":[]}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }

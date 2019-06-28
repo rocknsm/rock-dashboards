@@ -1,11 +1,27 @@
 {
-  "title": "STATS - Average TCP Conn",
-  "visState": "{\"title\":\"STATS - Average TCP Conn\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.tcp_conns\",\"customLabel\":\"Average TCP Conn/min\"}}],\"listeners\":{}}",
-  "uiStateJSON": "{}",
-  "description": "",
-  "savedSearchId": "stats",
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"filter\":[]}"
+  "id": "stats-average-tcp-conn",
+  "type": "visualization",
+  "updated_at": "2019-06-21T14:46:11.760Z",
+  "version": "Wzk3MywyXQ==",
+  "attributes": {
+    "title": "STATS - Average TCP Conn",
+    "visState": "{\"title\":\"STATS - Average TCP Conn\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"stats.tcp_conns\",\"customLabel\":\"Average TCP Conn/min\"}}],\"listeners\":{}}",
+    "uiStateJSON": "{}",
+    "description": "",
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchRefName": "search_0"
+  },
+  "references": [
+    {
+      "name": "search_0",
+      "type": "search",
+      "id": "stats"
+    }
+  ],
+  "migrationVersion": {
+    "visualization": "7.0.1"
   }
 }

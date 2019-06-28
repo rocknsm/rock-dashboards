@@ -1,22 +1,38 @@
 {
-  "title": "Bro - Notice",
-  "description": "",
-  "hits": 0,
-  "columns": [
-    "notice.note",
-    "notice.msg",
-    "notice.sub",
-    "@meta.related_ids",
-    "notice.src",
-    "notice.dst",
-    "notice.p"
+  "id": "73788b10-2037-11e8-82ea-3daef40316d8",
+  "type": "search",
+  "updated_at": "2019-06-21T14:45:27.086Z",
+  "version": "WzcxMSwyXQ==",
+  "attributes": {
+    "title": "Bro - Notice",
+    "description": "",
+    "hits": 0,
+    "columns": [
+      "notice.note",
+      "notice.msg",
+      "notice.sub",
+      "@meta.related_ids",
+      "notice.src",
+      "notice.dst",
+      "notice.p"
+    ],
+    "sort": [
+      "@timestamp",
+      "desc"
+    ],
+    "version": 1,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: notice\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+    }
+  },
+  "references": [
+    {
+      "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+      "type": "index-pattern",
+      "id": "e96d26e0-7b22-11e9-a327-21f5806c2dca"
+    }
   ],
-  "sort": [
-    "@timestamp",
-    "desc"
-  ],
-  "version": 1,
-  "kibanaSavedObjectMeta": {
-    "searchSourceJSON": "{\"index\":\"146c2580-1fdf-11e8-82ea-3daef40316d8\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"@meta.stream: notice\"},\"filter\":[]}"
+  "migrationVersion": {
+    "search": "7.0.0"
   }
 }
