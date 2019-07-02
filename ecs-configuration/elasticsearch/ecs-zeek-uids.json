@@ -1,0 +1,87 @@
+{
+  "order": 50,
+  "index_patterns": [
+    "ecs-zeek-*"
+  ],
+  "version": 2019042901,
+  "mappings": {
+    "properties": {
+      "log": {
+        "properties": {
+          "id": {
+            "properties": {
+              "cert_chain_fuids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "client_cert_chain_fuids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "client_cert_fuid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "conn_uids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "fid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "fuid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "fuids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "id": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "orig_fuids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "parent_fuid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "related_fuids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "resp_fuids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "server_cert_fuid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "tunnel_parents": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "uid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "uids": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "uuid": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

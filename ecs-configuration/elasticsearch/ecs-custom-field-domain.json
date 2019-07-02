@@ -1,9 +1,9 @@
 {
   "order": 20,
   "index_patterns": [
-    "ecs-bro-network-dns-*",
-    "ecs-bro-network-http-*",
-    "ecs-bro-network-ssl-*",
+    "ecs-zeek-network-dns-*",
+    "ecs-zeek-network-http-*",
+    "ecs-zeek-network-ssl-*",
     "ecs-suricata-network-dns-*",
     "ecs-suricata-network-http-*",
     "ecs-suricata-network-ssl-*"

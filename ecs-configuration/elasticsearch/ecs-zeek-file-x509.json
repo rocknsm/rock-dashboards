@@ -1,0 +1,151 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-file-x509-*"
+  ],
+  "version": 2019042901,
+  "mappings": {
+    "properties": {
+      "x509": {
+        "properties": {
+          "certificate": {
+            "properties": {
+              "basic_constraints_ca": {
+                "type": "boolean"
+              },
+              "basic_constraints_path_length": {
+                "type": "long"
+              },
+              "common_name": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "elliptic_curve": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "exponent": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "issuer": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "key_algorithm": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "key_length": {
+                "type": "long"
+              },
+              "key_type": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "not_valid_after": {
+                "type": "date"
+              },
+              "not_valid_before": {
+                "type": "date"
+              },
+              "serial": {
+                "ignore_above": 2048,
+                "type": "keyword"
+              },
+              "signature_algorithm": {
+                "ignore_above": 2048,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "subject": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "version": {
+                "type": "long"
+              }
+            }
+          },
+          "logcert": {
+            "type": "boolean"
+          },
+          "san": {
+            "properties": {
+              "dns": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "email": {
+                "copy_to": "related.user",
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "ip": {
+                "type": "ip"
+              },
+              "url": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

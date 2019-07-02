@@ -1,0 +1,145 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-ssl-*"
+  ],
+  "version": 2019042901,
+  "mappings": {
+    "properties": {
+      "hash": {
+        "properties": {
+          "ja3": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ja3s": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      },
+      "ssl": {
+        "properties": {
+          "cipher": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "client_issuer": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "client_subject": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "elliptic_curve": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "established": {
+            "type": "boolean"
+          },
+          "last_alert": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "next_protocol": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "notary": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "oscp_status": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "resumed": {
+            "type": "boolean"
+          },
+          "server_issuer": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "server_subject": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "valid_ct_logs": {
+            "type": "long"
+          },
+          "valid_ct_operators": {
+            "type": "long"
+          },
+          "valid_ct_operators_list": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "version_number": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }
+}

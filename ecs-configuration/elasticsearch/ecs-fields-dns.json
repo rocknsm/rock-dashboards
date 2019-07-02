@@ -1,7 +1,7 @@
 {
   "order": 20,
   "index_patterns": [
-    "ecs-bro-network-dns-*",
+    "ecs-zeek-network-dns-*",
     "ecs-suricata-network-dns-*"
   ],
   "version": 2019042901,
