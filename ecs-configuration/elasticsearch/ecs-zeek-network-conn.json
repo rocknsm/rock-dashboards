@@ -1,7 +1,7 @@
 {
   "order": 60,
   "index_patterns": [
-    "ecs-bro-network-conn-*"
+    "ecs-zeek-network-connection-*"
   ],
   "version": 2019042901,
   "mappings": {
@@ -21,7 +21,7 @@
           }
         }
       },
-      "conn": {
+      "connection": {
         "properties": {
           "local_orig": {
             "type": "boolean"
