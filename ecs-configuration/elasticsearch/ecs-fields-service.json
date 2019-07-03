@@ -6,7 +6,7 @@
   "version": 2019070301,
   "mappings": {
     "properties": {
-      "agent": {
+      "service": {
         "properties": {
           "ephemeral_id": {
             "ignore_above": 1024,
