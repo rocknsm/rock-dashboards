@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019052201,
+  "version": 2019070301,
   "mappings": {
     "properties": {
       "file": {

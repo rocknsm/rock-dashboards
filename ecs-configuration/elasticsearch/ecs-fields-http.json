@@ -4,7 +4,7 @@
     "ecs-zeek-network-http-*",
     "ecs-suricata-network-http-*"
   ],
-  "version": 2019042901,
+  "version": 2019070301,
   "mappings": {
     "properties": {
       "http": {

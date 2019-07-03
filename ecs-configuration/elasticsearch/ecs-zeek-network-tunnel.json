@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-zeek-network-tunnel-*"
   ],
-  "version": 2019042901,
+  "version": 2019070301,
   "mappings": {
     "properties": {
       "tunnel": {
