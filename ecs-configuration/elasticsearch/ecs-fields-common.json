@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019042901,
+  "version": 2019070201,
   "settings": {},
   "mappings": {
     "properties": {
@@ -54,6 +54,10 @@
             "type": "keyword"
           },
           "id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "kind": {
             "ignore_above": 1024,
             "type": "keyword"
           },
