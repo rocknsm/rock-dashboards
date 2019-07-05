@@ -1,5 +1,5 @@
 {
-  "order": 20,
+  "order": 90,
   "index_patterns": [
     "ecs-suricata-network-ssl-*",
     "ecs-suricata-network-tls-*",
