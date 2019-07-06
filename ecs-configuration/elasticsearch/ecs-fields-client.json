@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019070301,
+  "version": 2019070501,
   "mappings": {
     "properties": {
       "client": {
@@ -26,7 +26,7 @@
             },
             "type": "keyword"
           },
-          "autonomous_system": {
+          "as": {
             "properties": {
               "number": {
                 "type": "long"
