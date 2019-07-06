@@ -8,6 +8,7 @@
     "ecs-suricata-network-http-*",
     "ecs-suricata-network-ssl-*"
   ],
+  "version": 2019070301,
   "settings": {
     "index": {
       "analysis": {
@@ -27,7 +28,6 @@
       }
     }
   },
-  "version": 2019070301,
   "mappings": {
     "dynamic_templates": [
       {
