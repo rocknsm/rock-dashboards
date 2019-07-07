@@ -1,7 +1,7 @@
 {
   "order": 99,
   "index_patterns": [
-    "ecs-zeek-*"
+    "ecs-*"
   ],
   "version": 2019070301,
   "mappings": {
