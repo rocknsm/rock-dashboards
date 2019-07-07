@@ -1,0 +1,553 @@
+{
+  "order": 90,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019070701,
+  "mappings": {
+    "properties": {
+      "client": {
+        "properties": {
+          "autonomousSystem": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "autonomous_system": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "geo": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "as": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "destination": {
+        "properties": {
+          "autonomousSystem": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "autonomous_system": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "geo": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "as": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "server": {
+        "properties": {
+          "autonomousSystem": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "autonomous_system": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "geo": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "as": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "source": {
+        "properties": {
+          "autonomousSystem": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "autonomous_system": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "geo": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "as": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "asn": {
+                "type": "long"
+              },
+              "number": {
+                "type": "long"
+              },
+              "num": {
+                "type": "long"
+              },
+              "as_org": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "organization": {
+                "properties": {
+                  "name": {
+                    "ignore_above": 4096,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "autonomous_system": {
+        "properties": {
+          "ip": {
+            "type": "ip"
+          },
+          "asn": {
+            "type": "long"
+          },
+          "as_org": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
