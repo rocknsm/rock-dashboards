@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019070301,
+  "version": 2019070701,
   "settings": {
     "index": {
       "mapping": {
@@ -37,12 +37,7 @@
         "numeric_long_fields": {
           "match_mapping_type": "long",
           "mapping": {
-            "type": "long",
-            "fields": {
-              "keyword": {
-                "type": "keyword"
-              }
-            }
+            "type": "long"
           }
         }
       },
@@ -50,12 +45,7 @@
         "numeric_double_fields": {
           "match_mapping_type": "double",
           "mapping": {
-            "type": "double",
-            "fields": {
-              "keyword": {
-                "type": "keyword"
-              }
-            }
+            "type": "double"
           }
         }
       },
@@ -63,12 +53,7 @@
         "boolean_fields": {
           "match_mapping_type": "boolean",
           "mapping": {
-            "type": "boolean",
-            "fields": {
-              "keyword": {
-                "type": "keyword"
-              }
-            }
+            "type": "boolean"
           }
         }
       }
