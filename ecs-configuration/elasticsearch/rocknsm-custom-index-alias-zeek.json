@@ -1,0 +1,10 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-zeek-*"
+  ],
+  "version": 2019070601,
+  "aliases": {
+    "zeek-{index}": {}
+  }
+}
