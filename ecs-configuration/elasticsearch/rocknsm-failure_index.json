@@ -1,0 +1,41 @@
+{
+  "order": 99,
+  "version": 2014050201,
+  "index_patterns": [
+    "parse-failures-*"
+  ],
+  "settings": {
+    "index": {
+      "mapping": {
+        "coerce": "false",
+        "total_fields": {
+          "limit": "5000"
+        },
+        "ignore_malformed": "true"
+      },
+      "refresh_interval": "45s"
+    }
+  },
+  "mappings": {
+    "date_detection": false,
+    "dynamic_templates": [
+      {
+        "string_fields": {
+          "match_mapping_type": "string",
+          "mapping": {
+            "index": true,
+            "analyzer": "keyword",
+            "norms": false,
+            "ignore_above": 256,
+            "type": "keyword"
+          }
+        }
+      }
+    ],
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      }
+    }
+  }
+}

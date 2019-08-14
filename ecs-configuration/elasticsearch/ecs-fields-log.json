@@ -1,0 +1,28 @@
+{
+  "order": 10,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 20190814,
+  "settings": {},
+  "mappings": {
+    "properties": {
+      "log": {
+        "properties": {
+          "id": {
+            "type": "object"
+          },
+          "level": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "original": {
+            "doc_values": false,
+            "index": false,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

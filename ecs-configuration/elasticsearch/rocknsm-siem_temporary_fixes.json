@@ -1,0 +1,68 @@
+{
+  "order": 99,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "tls": {
+        "properties": {
+          "fingerprints": {
+            "properties": {
+              "ja3": {
+                "properties": {
+                  "hash": {
+                    "ignore_above": 1024,
+                    "type": "keyword"
+                  }
+                }
+              },
+              "ja3s": {
+                "properties": {
+                  "hash": {
+                    "ignore_above": 1024,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "server_certificate": {
+            "properties": {
+              "issuer": {
+                "properties": {
+                  "common_name": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "subject": {
+                "properties": {
+                  "common_name": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "version": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

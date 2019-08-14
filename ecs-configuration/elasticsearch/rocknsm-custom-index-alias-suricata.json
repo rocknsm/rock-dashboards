@@ -1,0 +1,10 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-suricata-*"
+  ],
+  "version": 2019070601,
+  "aliases": {
+    "suricata-{index}": {}
+  }
+}

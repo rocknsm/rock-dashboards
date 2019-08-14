@@ -1,0 +1,55 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-snmp-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "snmp": {
+        "properties": {
+          "community": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "display_string": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "duration": {
+            "type": "long"
+          },
+          "get_bulk_requests": {
+            "type": "long"
+          },
+          "get_requests": {
+            "type": "long"
+          },
+          "get_responses": {
+            "type": "long"
+          },
+          "set_requests": {
+            "type": "long"
+          },
+          "up_since": {
+            "type": "date"
+          },
+          "version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
