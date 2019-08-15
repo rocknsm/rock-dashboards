@@ -15,9 +15,6 @@
           "depth": {
             "type": "long"
           },
-          "duration": {
-            "type": "float"
-          },
           "extracted": {
             "ignore_above": 1024,
             "type": "keyword"

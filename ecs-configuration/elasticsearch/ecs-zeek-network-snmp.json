@@ -26,9 +26,6 @@
             },
             "type": "keyword"
           },
-          "duration": {
-            "type": "long"
-          },
           "get_bulk_requests": {
             "type": "long"
           },
