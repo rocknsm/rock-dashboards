@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-suricata-*"
   ],
-  "version": 2019081501,
+  "version": 2019081502,
   "settings": {
   },
   "mappings": {
@@ -741,6 +741,14 @@
       "dest_port": {
         "type": "alias",
         "path": "destination.port"
+      },
+      "proto": {
+        "type": "alias",
+        "path": "network.transport"
+      },
+      "app_proto": {
+        "type": "alias",
+        "path": "network.protocol"
       }
     }
   }
