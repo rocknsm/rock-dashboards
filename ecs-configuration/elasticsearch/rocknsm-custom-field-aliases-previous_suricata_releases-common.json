@@ -628,7 +628,7 @@
       },
       "event_type": {
         "type": "alias",
-        "path": "event.category"
+        "path": "event.dataset"
       },
       "geoip_src": {
         "properties": {
