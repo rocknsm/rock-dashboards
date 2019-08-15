@@ -1,7 +1,7 @@
 {
   "order": 90,
   "index_patterns": [
-    "ecs-zeek-*"
+    "ecs-suricata-*"
   ],
   "version": 2019081301,
   "settings": {
