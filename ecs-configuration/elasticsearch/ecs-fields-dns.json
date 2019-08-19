@@ -4,7 +4,7 @@
     "ecs-zeek-network-dns-*",
     "ecs-suricata-network-dns-*"
   ],
-  "version": 2019081301,
+  "version": 2019081901,
   "mappings": {
     "properties": {
       "dns": {
@@ -35,6 +35,10 @@
                 "type": "float"
               }
             }
+          },
+          "header_flags": {
+            "ignore_above": 1024,
+            "type": "keyword"
           },
           "question": {
             "properties": {
