@@ -1,25 +1,9 @@
 # Load ROCK Kibana Dashboards, Elastic Mappings, and Logstash configs
 
 This repository is arranged using the logstash module structure. Note that using it as a logstash module is not yet tested, but the goal is to
-get there. That said, there's currently two configurations in this repo. One for the "stable" configuration, and one for an [Elastic Common Schema](https://github.com/elastic/ecs) configuration. The ECS config will become the stable configuration but for now is tech preview.
+get there. That said, there's currently two configurations in this repo. One for the "stable" configuration, and one for an [Elastic Common Schema](https://www.elastic.co/guide/en/ecs/current/ecs-base.html) configuration.
 
-### Usage (stable):  
-```
-# Copy Elasticsearch mappings
-cd configuration/elasticsearch
-./import-index-templates.sh http://127.0.0.1:9200
-
-# Load Kibana saved objects
-cd ../kibana
-./import-saved-items.sh http://127.0.0.1:5601
-
-# Install Logstash configs and restart
-cd ../logstash
-sudo cp -a *.conf /etc/logstash/conf.d/
-sudo systemctl restart logstash
-```
-
-### Usage (ECS tech preview):
+### Usage (ECS stable/current):
 ```
 # Copy Elasticsearch mappings
 cd ecs-configuration/elasticsearch
@@ -32,10 +16,30 @@ cd ../kibana
 # Install Logstash configs and restart
 cd ../logstash
 sudo cp -a conf.d/*.conf /etc/logstash/conf.d/
-sudo mkdir -p /etc/logstash/ruby
-sudo cp -a ruby/*.rb /etc/logstash/ruby/
+sudo mkdir -p /etc/logstash/conf.d/ruby
+sudo cp -a ruby/*.rb /etc/logstash/conf.d/ruby/
+sudo chown -R logstash:logstash /etc/logstash/conf.d
 sudo systemctl restart logstash
 ```
+
+### Usage (Prior releases):  
+```
+# Copy Elasticsearch mappings
+cd configuration/elasticsearch
+./import-index-templates.sh http://127.0.0.1:9200
+
+# Load Kibana saved objects
+cd ../kibana
+./import-saved-items.sh http://127.0.0.1:5601
+
+# Install Logstash configs and restart
+cd ../logstash
+sudo cp -a *.conf /etc/logstash/conf.d/
+sudo chown -R logstash:logstash /etc/logstash/conf.d
+sudo systemctl restart logstash
+```
+
+
 
 ----  
 # Contributing  
@@ -71,7 +75,7 @@ cd ../kibana
 # Standards  
 
 There aren't many, but here are a few:  
- *  We don't use dark themes.  Yes, network defense is dark and moody affair, but the dark theme isn't the default, so for consistency's sake, lets keep it light.  
+ *  We use dark themes.
  *  Try to keep the naming simple and consistent.  Nothing like "ZOMG hackerz in the wirez!!1!"  
  *  Your pull request has to load cleanly with the `import-saved-items.sh` and `import-index-templates.sh` and produce a valid configuration in Kibana or it will be closed.  Nothing personal, but we don't have time to patch up submissions. Right now we do this manually. We're working on continuous integration testing that will provide immediate feedback after a test run on the latest Elastic platform.
  *  Have fun.  
