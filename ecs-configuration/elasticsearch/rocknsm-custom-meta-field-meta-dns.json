@@ -1,0 +1,44 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-zeek-network-dns-*",
+    "ecs-suricata-network-dns-*"
+  ],
+  "version": 2019081301,
+  "mappings": {
+    "properties": {
+      "dns": {
+        "properties": {
+          "meta": {
+            "properties": {
+              "answers": {
+                "properties": {
+                  "hash": {
+                    "properties": {
+                      "sha1": {
+                        "ignore_above": 1024,
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "has_non_ascii": {
+                    "type": "boolean"
+                  },
+                  "has_whitespace": {
+                    "type": "boolean"
+                  },
+                  "length": {
+                    "type": "long"
+                  },
+                  "total_length": {
+                    "type": "long"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

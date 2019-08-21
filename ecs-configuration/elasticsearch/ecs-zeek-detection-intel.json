@@ -1,0 +1,54 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-detection-intel-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "intel": {
+        "properties": {
+          "file_description": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "matched": {
+            "type": "boolean"
+          },
+          "seen": {
+            "properties": {
+              "indicator": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "indicator_type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "ip": {
+                "type": "ip"
+              },
+              "node": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "where": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "sources": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

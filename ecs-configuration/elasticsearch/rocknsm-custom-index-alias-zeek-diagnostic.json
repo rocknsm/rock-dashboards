@@ -1,0 +1,11 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-zeek-diagnostic-*"
+  ],
+  "version": 2019081301,
+  "aliases": {
+    "zeek-diagnostic-{index}": {},
+    "bro-diagnostic-{index}": {}
+  }
+}

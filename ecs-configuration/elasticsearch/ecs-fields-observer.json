@@ -1,0 +1,47 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "observer": {
+        "properties": {
+          "hostname": {
+            "copy_to": "related.domain",
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ip": {
+            "copy_to": "related.ip",
+            "type": "ip"
+          },
+          "mac": {
+            "copy_to": "related.mac",
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "sensor_version": {
+            "type": "keyword"
+          },
+          "serial_number": {
+            "type": "keyword"
+          },
+          "sub_process": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          },
+          "vendor": {
+            "type": "keyword"
+          },
+          "version": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

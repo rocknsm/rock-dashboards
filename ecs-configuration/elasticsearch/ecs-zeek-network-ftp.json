@@ -1,0 +1,63 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-ftp-*"
+  ],
+  "version": 2019081301,
+  "mappings": {
+    "properties": {
+      "ftp": {
+        "properties": {
+          "args": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "command": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "data_channel": {
+            "properties": {
+              "orig_h": {
+                "type": "ip"
+              },
+              "passive": {
+                "type": "boolean"
+              },
+              "resp_h": {
+                "type": "ip"
+              },
+              "resp_p": {
+                "type": "long"
+              }
+            }
+          },
+          "passive": {
+            "type": "boolean"
+          },
+          "password": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "reply_code": {
+            "type": "long"
+          },
+          "reply_msg": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

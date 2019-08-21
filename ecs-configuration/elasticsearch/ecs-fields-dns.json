@@ -1,0 +1,83 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-zeek-network-dns-*",
+    "ecs-suricata-network-dns-*"
+  ],
+  "version": 2019081901,
+  "mappings": {
+    "properties": {
+      "dns": {
+        "properties": {
+          "answers_count": {
+            "type": "long"
+          },
+          "answers": {
+            "properties": {
+              "class": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "ttl": {
+                "type": "float"
+              }
+            }
+          },
+          "header_flags": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "question": {
+            "properties": {
+              "class": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "name": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "type": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "etld_plus_one": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          },
+          "response_code": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "status_code": {
+            "type": "long"
+          },
+          "id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "url": {
+        "properties": {
+          "domain": {
+            "copy_to": "related.domain",
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "extension": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "fragment": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "full": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "meta": {
+            "properties": {
+              "has_non_ascii": {
+                "type": "boolean"
+              },
+              "has_whitespace": {
+                "type": "boolean"
+              },
+              "total_length": {
+                "type": "long"
+              },
+              "paths": {
+                "type": "long"
+              }
+            }
+          },
+          "original": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "port": {
+            "type": "long"
+          },
+          "path": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "query": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "scheme": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "username": {
+            "copy_to": "related.user",
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "password": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "variables": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

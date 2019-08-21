@@ -1,0 +1,42 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-ntlm-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "ntlm": {
+        "properties": {
+          "domain": {
+            "properties": {
+              "netbios_name": {
+                "copy_to": "related.domain",
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "tree": {
+                "copy_to": "related.domain",
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          },
+          "successful": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

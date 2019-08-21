@@ -1,0 +1,79 @@
+{
+  "order": 10,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019081401,
+  "settings": {},
+  "mappings": {
+    "properties": {
+      "event": {
+        "properties": {
+          "category": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "created": {
+            "type": "date"
+          },
+          "dataset": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "duration": {
+            "type": "long"
+          },
+          "end": {
+            "type": "date"
+          },
+          "facility": {
+            "type": "keyword"
+          },
+          "hash": {
+            "type": "keyword"
+          },
+          "id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "kind": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "module": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "original": {
+            "doc_values": false,
+            "index": false,
+            "type": "keyword"
+          },
+          "outcome": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "priority": {
+            "type": "keyword"
+          },
+          "risk_score": {
+            "type": "float"
+          },
+          "risk_score_norm": {
+            "type": "float"
+          },
+          "severity": {
+            "type": "keyword"
+          },
+          "start": {
+            "type": "date"
+          },
+          "timezone": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

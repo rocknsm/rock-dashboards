@@ -1,0 +1,38 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-modbus*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "modbus": {
+        "properties": {
+          "delta": {
+            "type": "float"
+          },
+          "function": {
+            "ignore_above": 2048,
+            "type": "keyword"
+          },
+          "new_value": {
+            "type": "long"
+          },
+          "old_value": {
+            "type": "long"
+          },
+          "register": {
+            "type": "long"
+          },
+          "track_address": {
+            "type": "long"
+          }
+        }
+      },
+      "modbus_register_change": {
+        "properties": {
+        }
+      }
+    }
+  }
+}

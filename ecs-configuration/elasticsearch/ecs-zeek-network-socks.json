@@ -1,0 +1,65 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-socks-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "socks": {
+        "properties": {
+          "bound": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "name": {
+                "ignore_above": 1024,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "port": {
+                "type": "long"
+              }
+            }
+          },
+          "request": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              },
+              "name": {
+                "ignore_above": 1024,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "port": {
+                "type": "long"
+              }
+            }
+          },
+          "status": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "version": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }
+}

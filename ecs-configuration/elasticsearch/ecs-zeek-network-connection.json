@@ -1,0 +1,88 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-connection-*"
+  ],
+  "version": 2019081301,
+  "mappings": {
+    "properties": {
+      "client": {
+        "properties": {
+          "history": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "history_detailed": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ip_bytes": {
+            "type": "long"
+          }
+        }
+      },
+      "connection": {
+        "properties": {
+          "history": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "history_detailed": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "local_orig": {
+            "type": "boolean"
+          },
+          "local_resp": {
+            "type": "boolean"
+          },
+          "state": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ip_bytes": {
+            "type": "long"
+          },
+          "missed_bytes": {
+            "type": "long"
+          }
+        }
+      },
+      "log": {
+        "properties": {
+          "id": {
+            "properties": {
+              "tunnel_parents": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "network": {
+        "properties": {
+          "ip_bytes": {
+            "type": "long"
+          }
+        }
+      },
+      "server": {
+        "properties": {
+          "history": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "history_detailed": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "ip_bytes": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }
+}

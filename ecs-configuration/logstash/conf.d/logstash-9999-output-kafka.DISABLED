@@ -1,0 +1,11 @@
+# To enable this file, change the extension to "conf"
+output {
+  # Requires event module and category, which is done via the logstash pipeline already implemented.
+  if [event][module] and [event][category] {
+    kafka {
+      codec => json
+      topic_id => "ecs-%{[event][module]}-%{[event][category]}"
+      bootstrap_servers => "127.0.0.1:9092"
+    }
+  }
+}
