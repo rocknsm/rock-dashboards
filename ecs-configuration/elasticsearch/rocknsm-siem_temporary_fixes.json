@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019070301,
+  "version": 2019082101,
   "mappings": {
     "properties": {
       "tls": {
@@ -57,6 +57,45 @@
                 }
               },
               "version": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "source": {
+        "properties": {
+          "autonomous_system": {
+            "properties": {
+              "asn": {
+                "type": "long"
+              },
+              "as_org": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "destination": {
+        "properties": {
+          "autonomous_system": {
+            "properties": {
+              "asn": {
+                "type": "long"
+              },
+              "as_org": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "dns": {
+        "properties": {
+          "question": {
+            "properties": {
+              "etld_plus_one": {
                 "type": "keyword"
               }
             }
