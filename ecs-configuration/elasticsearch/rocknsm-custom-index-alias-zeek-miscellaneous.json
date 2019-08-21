@@ -1,0 +1,11 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-zeek-miscellaneous-*"
+  ],
+  "version": 2019081301,
+  "aliases": {
+    "zeek-miscellaneous-{index}": {},
+    "bro-miscellaneous-{index}": {}
+  }
+}

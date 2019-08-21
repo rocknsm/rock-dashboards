@@ -23,7 +23,7 @@ def filter(event)
   host = event.get(@source_field)
 
   related_ip = Set.new( event.get('[related][ip]'))
-  related_hostname = Set.new( event.get('[related][hostname]'))
+  related_hostname = Set.new( event.get('[related][domain]'))
 
   if (host =~ IPV4_REGEX) || (host =~ IPV6_REGEX)
     related_ip.add(host)
@@ -35,7 +35,7 @@ def filter(event)
     event.set( '[related][ip]', related_ip.to_a )
   end
   if related_hostname.size() > 0
-    event.set( '[related][hostname]', related_hostname.to_a )
+    event.set( '[related][domain]', related_hostname.to_a )
   end
 
   return [event]
@@ -46,7 +46,7 @@ end
 test "when host is hostname" do
   parameters {{"source_field" => "host"}}
   in_event {{"host" => "www.google.com"}}
-  expect("related fields are set") {|events| events.first.get("[related][hostname]").first == "www.google.com"}
+  expect("related fields are set") {|events| events.first.get("[related][domain]").first == "www.google.com"}
 end
 
 test "when host is IPv4" do

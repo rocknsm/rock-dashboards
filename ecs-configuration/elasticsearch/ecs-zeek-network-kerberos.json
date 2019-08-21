@@ -1,0 +1,137 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-kerberos-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "kerberos": {
+        "properties": {
+          "error_code": {
+            "type": "long"
+          },
+          "error_message": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "request": {
+            "properties": {
+              "client": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "certificate": {
+                "properties": {
+                  "subject": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "sucessful": {
+                "type": "boolean"
+              },
+              "ticket": {
+                "properties": {
+                  "cipher": {
+                    "ignore_above": 2048,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  },
+                  "forwardable": {
+                    "type": "boolean"
+                  },
+                  "hash": {
+                    "properties": {
+                      "md5": {
+                        "copy_to": "related.hash",
+                        "ignore_above": 1024,
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "renewable": {
+                    "type": "boolean"
+                  },
+                  "type": {
+                    "ignore_above": 1024,
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "reponse": {
+            "properties": {
+              "certificate": {
+                "properties": {
+                  "subject": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "ticket": {
+                "properties": {
+                  "hash": {
+                    "properties": {
+                      "md5": {
+                        "copy_to": "related.hash",
+                        "ignore_above": 1024,
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "ticket": {
+            "properties": {
+              "service": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "valid_from": {
+                "type": "date"
+              },
+              "valid_till": {
+                "type": "date"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

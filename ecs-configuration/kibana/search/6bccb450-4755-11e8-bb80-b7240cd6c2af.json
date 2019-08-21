@@ -1,0 +1,16 @@
+{
+  "columns": [
+    "_source"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"alert.signature: * fields: alert.signature\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Signatures [RockMigration]",
+  "version": 1
+}

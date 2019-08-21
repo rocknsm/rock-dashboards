@@ -1,0 +1,58 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-mysql-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "mysql": {
+        "properties": {
+          "args": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "command": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "response": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "rows": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "successful": {
+            "type": "boolean"
+          }
+        }
+      },
+      "modbus_register_change": {
+        "properties": {
+        }
+      }
+    }
+  }
+}

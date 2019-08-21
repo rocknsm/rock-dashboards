@@ -1,0 +1,35 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "agent": {
+        "properties": {
+          "ephemeral_id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "name": {
+            "copy_to": "related.domain",
+            "type": "keyword"
+          },
+          "type": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

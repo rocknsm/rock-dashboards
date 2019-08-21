@@ -1,0 +1,19 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-smb_files-*"
+  ],
+  "version": 2019081301,
+  "mappings": {
+    "properties": {
+      "smb_files": {
+        "properties": {
+          "action": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

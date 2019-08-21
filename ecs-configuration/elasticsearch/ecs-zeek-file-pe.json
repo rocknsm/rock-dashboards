@@ -1,0 +1,84 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-file-pe-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "pe": {
+        "properties": {
+          "compile_ts": {
+            "type": "date"
+          },
+          "has_cert_table": {
+            "type": "boolean"
+          },
+          "has_debug_data": {
+            "type": "boolean"
+          },
+          "has_import_table": {
+            "type": "boolean"
+          },
+          "has_export_table": {
+            "type": "boolean"
+          },
+          "is_64bit": {
+            "type": "boolean"
+          },
+          "is_exe": {
+            "type": "boolean"
+          },
+          "machine": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "os": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "section_names": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "subsystem": {
+            "ignore_above": 1024,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "uses_aslr": {
+            "type": "boolean"
+          },
+          "uses_code_integrity": {
+            "type": "boolean"
+          },
+          "uses_dep": {
+            "type": "boolean"
+          },
+          "uses_seh": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

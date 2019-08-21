@@ -1,0 +1,19 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-observations-known_modbus-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "known_modbus": {
+        "properties": {
+          "device_type": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-smb_mapping-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "smb_mapping": {
+        "properties": {
+          "native_file_system": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "path": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "share_type": {
+            "ignore_above": 8000,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "service": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

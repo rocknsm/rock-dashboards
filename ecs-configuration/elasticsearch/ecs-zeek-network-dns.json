@@ -1,0 +1,63 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-suricata-network-dns-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "dns": {
+        "properties": {
+          "AA": {
+            "type": "boolean"
+          },
+          "RA": {
+            "type": "boolean"
+          },
+          "RD": {
+            "type": "boolean"
+          },
+          "TC": {
+            "type": "boolean"
+          },
+          "Z": {
+            "type": "long"
+          },
+          "addl": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 4096
+              }
+            }
+          },
+          "auth": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 4096
+              }
+            }
+          },
+          "authorities_count": {
+            "type": "long"
+          },
+          "qclass": {
+            "type": "long"
+          },
+          "qtype": {
+            "type": "long"
+          },
+          "rcode": {
+            "type": "long"
+          },
+          "rejected": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

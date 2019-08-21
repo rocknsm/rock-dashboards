@@ -1,0 +1,49 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-radius-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "radius": {
+        "properties": {
+          "calling_station_id": {
+            "copy_to": "related.mac",
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "connect_info": {
+            "ignore_above": 2048,
+            "type": "keyword"
+          },
+          "framed": {
+            "properties": {
+              "ip": {
+                "type": "ip"
+              }
+            }
+          },
+          "reply_message": {
+            "ignore_above": 2048,
+            "type": "keyword"
+          },
+          "time_to_live": {
+            "type": "float"
+          },
+          "tunnel": {
+            "properties": {
+              "client": {
+                "properties": {
+                  "endpoint": {
+                    "type": "ip"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

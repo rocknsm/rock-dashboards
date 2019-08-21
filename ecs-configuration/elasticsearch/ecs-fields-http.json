@@ -1,0 +1,154 @@
+{
+  "order": 20,
+  "index_patterns": [
+    "ecs-zeek-network-http-*",
+    "ecs-suricata-network-http-*"
+  ],
+  "version": 2019070301,
+  "mappings": {
+    "properties": {
+      "http": {
+        "properties": {
+          "cookie_variables": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "request": {
+            "properties": {
+              "bytes": {
+                "type": "long"
+              },
+              "body": {
+                "properties": {
+                  "bytes": {
+                    "type": "long"
+                  },
+                  "content": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "header_names": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "method": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "mime_type": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "origin": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "proxied": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "referrer": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          },
+          "response": {
+            "properties": {
+              "bytes": {
+                "type": "long"
+              },
+              "body": {
+                "properties": {
+                  "bytes": {
+                    "type": "long"
+                  },
+                  "content": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "header_names": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "informational_code": {
+                "type": "long"
+              },
+              "informational_message": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              },
+              "mime_type": {
+                "ignore_above": 4096,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "status_code": {
+                "type": "long"
+              },
+              "status_name": {
+                "ignore_above": 4096,
+                "type": "keyword"
+              }
+            }
+          },
+          "transaction_depth": {
+            "type": "long"
+          },
+          "version": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
