@@ -1,0 +1,23 @@
+{
+  "columns": [
+    "related.id",
+    "ssl.subject",
+    "ssl.server_name",
+    "ssl.issuer",
+    "ssl.validation_status",
+    "ssl.version",
+    "ssl.cipher",
+    "ssl.established"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"event.dataset: tls\",\"language\":\"lucene\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Bro - SSL [RockMigration]",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "columns": [
+    "stats.capture.kernel_drops",
+    "stats.capture.kernel_packets",
+    "stats.decoder.pkts",
+    "stats.decoder.ethernet",
+    "stats.decoder.vlan",
+    "stats.decoder.erspan",
+    "stats.decoder.gre"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event_type: stats\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Suricata - Stats [RockMigration]",
+  "version": 1
+}

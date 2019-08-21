@@ -1,0 +1,22 @@
+{
+  "columns": [
+    "notice.note",
+    "notice.msg",
+    "notice.sub",
+    "related.id",
+    "notice.src",
+    "notice.dst",
+    "notice.p"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event.dataset: notice\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Bro - Notice [RockMigration]",
+  "version": 1
+}

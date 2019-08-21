@@ -1,0 +1,24 @@
+{
+  "columns": [
+    "client.ip",
+    "server.ip",
+    "src_port",
+    "server.port",
+    "proto",
+    "network.protocol",
+    "alert.severity",
+    "alert.signature",
+    "alert.signature_id"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event_type: alert\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Suricata - Alert [RockMigration]",
+  "version": 1
+}
