@@ -1,0 +1,22 @@
+{
+  "columns": [
+    "client.ip",
+    "server.ip",
+    "dns.question.type",
+    "dns.question.name",
+    "dns.response_code",
+    "suricata.dns.answers.rrname",
+    "Docket PCAP"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event.dataset: dns AND dns.response_code:NXDOMAIN\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Bro - DNS NXDOMAIN [RockMigration]",
+  "version": 1
+}

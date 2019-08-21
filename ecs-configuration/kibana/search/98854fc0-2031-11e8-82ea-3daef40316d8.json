@@ -1,0 +1,26 @@
+{
+  "columns": [
+    "flow.end",
+    "client.ip",
+    "server.ip",
+    "src_port",
+    "server.port",
+    "proto",
+    "source.packets",
+    "source.bytes",
+    "destination.packets",
+    "destination.bytes",
+    "network.protocol"
+  ],
+  "description": "",
+  "hits": 0,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"event_type: flow\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+  },
+  "sort": [
+    "@timestamp",
+    "desc"
+  ],
+  "title": "Suricata - Flow [RockMigration]",
+  "version": 1
+}
