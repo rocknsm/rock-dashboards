@@ -33,9 +33,9 @@ for item in index-pattern search visualization dashboard config; do
 done
 
 # Set default index
-defaultIndex=$(jq -r '.value' index-pattern/ecs-all.json)
+#defaultIndex=$(jq -r '.value' index-pattern/ecs-all.json)
+defaultIndex="ecs-all"
 
 echo "Setting defaultIndex to ${defaultIndex}" > /dev/stderr
 curl -s -XPOST -H"kbn-xsrf: true" -H"Content-Type: application/json" \
 	"${KIBANA_URL}/api/kibana/settings/defaultIndex" -d"{\"value\": \"${defaultIndex}\"}" >/dev/null
-
