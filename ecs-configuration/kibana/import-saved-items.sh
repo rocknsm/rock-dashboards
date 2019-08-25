@@ -28,7 +28,7 @@ for item in index-pattern search visualization dashboard config; do
 done
 
 # Set default index
-defaultIndex=$(jq -r '.value' index-pattern/default.json)
+defaultIndex=$(jq -r '.value' index-pattern/ecs-all)
 
 echo "Setting defaultIndex to ${defaultIndex}" > /dev/stderr
 curl -s -XPOST -H"kbn-xsrf: true" -H"Content-Type: application/json" \
