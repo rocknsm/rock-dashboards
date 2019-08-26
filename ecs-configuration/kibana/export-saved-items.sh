@@ -1,15 +1,15 @@
-#!/bin/bash 
+#!/bin/bash
 
 _URL=$1
 KIBANA_URL=${_URL:=http://127.0.0.1:5601}
 
-for item in index-pattern search visualization dashboard config; do
+for item in index-pattern search visualization dashboard; do
     mkdir -p ${item}
     cd ${item}
 
-    export FIRST=1 
+    export FIRST=1
     echo -n "[" > index.json
-    for id in $(curl -s "${KIBANA_URL}/api/saved_objects/_find?type=${item}" | jq -r '.saved_objects[] | .id'); do
+    for id in $(curl -s "${KIBANA_URL}/api/saved_objects/_find?type=${item}&per_page=1000" | jq -r '.saved_objects[] | .id'); do
         if [ "x${FIRST}" == "x0" ]; then
             echo -n ", " >> index.json
         else
@@ -17,13 +17,19 @@ for item in index-pattern search visualization dashboard config; do
         fi
 
         echo "Exporting ${item} named ${id} as ${id}.json" > /dev/stderr
-        curl -s "${KIBANA_URL}/api/saved_objects/${item}/${id}" | jq  '.attributes' > "${id}.json"
+        curl -s "${KIBANA_URL}/api/saved_objects/${item}/${id}" | jq ''  > "${id}.json"
         echo -n "\"${id}\"" >> index.json
 
     done
     echo -n "]" >> index.json
+
+    # Sort index for idempotence
+    jq '. | sort' < index.json > index2.json && mv index2.json index.json
     unset FIRST
 
     cd ..
 done
 
+# Save default index
+echo "Exporting default index pattern setting."
+curl -s "${KIBANA_URL}/api/kibana/settings" | jq '.settings.defaultIndex' > index-pattern/default.json
