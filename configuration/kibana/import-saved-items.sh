@@ -8,22 +8,25 @@ for item in index-pattern search visualization dashboard config; do
     cd ${item} 2>/dev/null || continue
 
     for id in $(cat index.json | jq -r '.[]'); do
+        file="${id}.json"
         if curl -sI "${KIBANA_URL}/api/saved_objects/${item}/${id}" | grep -q '^HTTP.*404'; then
             # object doesn't exist, create it
             echo "Creating ${item} with id ${id}" > /dev/stderr
             curl -s -XPOST \
-                -H"kbn-xsrf: true" \
-                -H"Content-Type: application/json" \
                 "${KIBANA_URL}/api/saved_objects/${item}/${id}" \
-                -d"{\"attributes\": $(cat ${id}.json | jq '.attributes'),\"references\": $(cat ${id}.json | jq '.references')}" > /dev/null
+                -H "kbn-xsrf: true" \
+                -H "Content-Type: application/json" \
+                -d "@-" \
+                <<< "{\"attributes\": $(cat "${file}")}" > /dev/null
         else
             # object already exists, apply update
             echo "Overwriting ${item} named ${id}" > /dev/stderr
             curl -s -XPUT \
-                -H"kbn-xsrf: true" \
-                -H"Content-Type: application/json" \
-                "${KIBANA_URL}/api/saved_objects/${item}/${id}?overwrite=true" \
-                -d"{\"attributes\": $(cat ${id}.json | jq '.attributes'),\"references\": $(cat ${id}.json | jq '.references')}" > /dev/null
+                "${KIBANA_URL}/api/saved_objects/${item}/${id}" \
+                -H "kbn-xsrf: true" \
+                -H "Content-Type: application/json" \
+                -d "@-" \
+                <<< "{\"attributes\": $(cat "${file}")}" > /dev/null
         fi
     done
     cd ..
