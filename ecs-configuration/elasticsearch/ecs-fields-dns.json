@@ -4,7 +4,7 @@
     "ecs-zeek-network-dns-*",
     "ecs-suricata-network-dns-*"
   ],
-  "version": 2019081901,
+  "version": 2019082401,
   "mappings": {
     "properties": {
       "dns": {
@@ -18,6 +18,10 @@
                 "ignore_above": 1024,
                 "type": "keyword"
               },
+              "data": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
               "name": {
                 "ignore_above": 8000,
                 "fields": {
@@ -27,16 +31,24 @@
                 },
                 "type": "keyword"
               },
+              "ttl": {
+                "type": "long"
+              },
               "type": {
                 "ignore_above": 1024,
                 "type": "keyword"
-              },
-              "ttl": {
-                "type": "float"
               }
             }
           },
           "header_flags": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "id": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "op_code": {
             "ignore_above": 1024,
             "type": "keyword"
           },
@@ -46,6 +58,10 @@
                 "ignore_above": 1024,
                 "type": "keyword"
               },
+              "etld_plus_one": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
               "name": {
                 "ignore_above": 8000,
                 "fields": {
@@ -55,11 +71,14 @@
                 },
                 "type": "keyword"
               },
-              "type": {
+              "registered_domain": {
                 "ignore_above": 1024,
                 "type": "keyword"
               },
-              "etld_plus_one": {
+              "resolved_ip": {
+                "type": "ip"
+              },
+              "type": {
                 "ignore_above": 1024,
                 "type": "keyword"
               }
@@ -72,7 +91,7 @@
           "status_code": {
             "type": "long"
           },
-          "id": {
+          "type": {
             "ignore_above": 1024,
             "type": "keyword"
           }

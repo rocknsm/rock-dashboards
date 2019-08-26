@@ -82,6 +82,7 @@ def filter(event)
 
   if related_ip.size() > 0
     event.set( '[related][ip]', related_ip.to_a )
+    event.set( '[dns][question][resolved_ip]', related_ip.to_a )
   end
   if related_hostname.size() > 0
     event.set( '[related][domain]', related_hostname.to_a )
