@@ -13,7 +13,6 @@ for item in config index-pattern search visualization dashboard; do
 
   for id in $(cat index.json | jq -r '.[]'); do
     file="${id}.ndjson"
-    echo $file
     if curl -sI "${KIBANA_URL}/api/saved_objects/${item}/${id}" | grep -q '^HTTP.*404'; then
       # object doesn't exist, create it
       echo "Creating ${item} with id ${id}" > /dev/stderr
