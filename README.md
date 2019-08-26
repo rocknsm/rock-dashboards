@@ -13,6 +13,10 @@ cd ecs-configuration/elasticsearch
 cd ../kibana
 ./import-saved-items.sh http://127.0.0.1:5601
 
+# Load Kibana settings
+cd ../kibana
+./import-config_settings.sh http://127.0.0.1:5601
+
 # Install Logstash configs and restart
 cd ../logstash
 sudo cp -a conf.d/*.conf /etc/logstash/conf.d/
