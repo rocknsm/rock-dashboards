@@ -8,7 +8,7 @@ updated=0
 created=0
 failed=0
 
-for item in config index-pattern search visualization dashboard; do
+for item in config index-pattern search visualization dashboard url map canvas-workpad canvas-element timelion; do
   cd ${item} 2>/dev/null || continue
 
   for id in $(cat index.json | jq -r '.[]'); do
