@@ -3,7 +3,7 @@
 _URL=$1
 KIBANA_URL=${_URL:=http://127.0.0.1:5601}
 
-for item in config index-pattern search visualization dashboard; do
+for item in config index-pattern search visualization dashboard url map canvas-workpad canvas-element timelion; do
   mkdir -p ${item}
   cd ${item}
 
