@@ -10,7 +10,7 @@ failed=0
 
 echo "Please be patient as we import 200+ custom dashboards, visualizations, and searches..."
 
-for item in config index-pattern search visualization dashboard url map canvas-workpad canvas-element timelion; do
+for item in index-pattern search visualization dashboard url map canvas-workpad canvas-element timelion; do
   cd ${item} 2>/dev/null || continue
 
   for id in $(cat index.json | jq -r '.[]'); do
