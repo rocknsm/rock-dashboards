@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019082102,
+  "version": 2020010901,
   "mappings": {
     "properties": {
       "tls": {
@@ -25,6 +25,39 @@
                     "type": "keyword"
                   }
                 }
+              }
+            }
+          },
+          "client_certificate": {
+            "properties": {
+              "issuer": {
+                "properties": {
+                  "common_name": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "subject": {
+                "properties": {
+                  "common_name": {
+                    "ignore_above": 8000,
+                    "fields": {
+                      "text": {
+                        "type": "text"
+                      }
+                    },
+                    "type": "keyword"
+                  }
+                }
+              },
+              "version": {
+                "type": "keyword"
               }
             }
           },
