@@ -26,7 +26,8 @@ for item in config index-pattern search visualization dashboard url map canvas-w
         { \"objects\": [
             {
               \"type\": \"${item}\",
-              \"id\": \"${id}\"
+              \"id\": \"${id}\",
+              \"excludeExportDetails\": false
             }
         ] }
       " \
