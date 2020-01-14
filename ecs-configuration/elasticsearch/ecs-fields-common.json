@@ -3,7 +3,7 @@
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019070301,
+  "version": 2020011401,
   "settings": {},
   "mappings": {
     "properties": {
@@ -104,10 +104,40 @@
             "ignore_above": 1024,
             "type": "keyword"
           },
+          "logger": {
+            "type": "keyword"
+          },
           "original": {
             "doc_values": false,
             "index": false,
             "type": "keyword"
+          },
+          "syslog": {
+            "properties": {
+              "facility": {
+                "properties": {
+                  "code": {
+                    "type": "long"
+                  },
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "severity": {
+                "properties": {
+                  "code": {
+                    "type": "long"
+                  },
+                  "name": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "priority": {
+                "type": "long"
+              }
+            }
           }
         }
       }
