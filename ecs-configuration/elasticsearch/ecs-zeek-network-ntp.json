@@ -1,0 +1,54 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-zeek-network-ntp-*"
+  ],
+  "version": 2020011401,
+  "mappings": {
+    "properties": {
+      "ntp": {
+        "properties": {
+          "mode": {
+            "type": "long"
+          },
+          "num_exts": {
+            "type": "long"
+          },
+          "org_time": {
+            "type": "date"
+          },
+          "poll": {
+            "type": "float"
+          },
+          "precision": {
+            "type": "double"
+          },
+          "rec_time": {
+            "type": "date"
+          },
+          "ref_id": {
+            "type": "keyword"
+          },
+          "ref_time": {
+            "type": "date"
+          },
+          "root_delay": {
+            "type": "double"
+          },
+          "root_disp": {
+            "type": "double"
+          },
+          "stratum": {
+            "type": "long"
+          },
+          "version": {
+            "type": "long"
+          },
+          "xmt_time": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}
