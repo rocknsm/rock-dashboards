@@ -1,0 +1,66 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2020012101,
+  "mappings": {
+    "properties": {
+      "rule": {
+        "properties": {
+          "category": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "description": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "id": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "name": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "reference": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "ruleset": {
+            "ignore_above": 4096,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "uuid": {
+            "ignore_above": 4096,
+            "type": "keyword"
+          },
+          "version": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
