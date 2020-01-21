@@ -29,7 +29,7 @@ for item in config index-pattern search visualization dashboard url map canvas-w
         created=$((created+1))
       else
         failed=$((failed+1))
-        echo -e "Failed creating ${file}: \n ${response}\n"
+        echo -e "Failed creating ${item} named ${file}: \n ${response}\n"
       fi
     else
       # object already exists, apply update
@@ -45,7 +45,7 @@ for item in config index-pattern search visualization dashboard url map canvas-w
         updated=$((updated+1))
       else
         failed=$((failed+1))
-        echo -e "Failed updating ${file}: \n ${response}\n"
+        echo -e "Failed updating ${item} named ${file}: \n ${response}\n"
       fi
 
     fi
