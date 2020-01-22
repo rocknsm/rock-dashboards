@@ -1,12 +1,12 @@
 {
   "order": 60,
   "index_patterns": [
-    "ecs-zeek-network-ssl-*"
+    "ecs-zeek-network-tls-*"
   ],
   "version": 2020010901,
   "mappings": {
     "properties": {
-      "ssl": {
+      "tls": {
         "properties": {
           "last_alert": {
             "ignore_above": 1024,
