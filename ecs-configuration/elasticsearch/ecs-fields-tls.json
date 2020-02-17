@@ -1,0 +1,127 @@
+{
+  "order": 60,
+  "index_patterns": [
+    "ecs-*"
+  ],
+  "version": 2020010901,
+  "mappings": {
+    "properties": {
+      "tls": {
+        "properties": {
+          "cipher": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "client": {
+            "properties": {
+              "hash": {
+                "properties": {
+                  "sha1": {
+                    "ignore_above": 1024,
+                    "type": "keyword"
+                  }
+                }
+              },
+              "issuer": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "ja3": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "server_name": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "subject": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+              }
+          },
+          "curve": {
+            "type": "keyword"
+          },
+          "established": {
+            "type": "boolean"
+          },
+          "next_protocol": {
+            "ignore_above": 2048,
+            "fields": {
+              "text": {
+                "type": "text"
+              }
+            },
+            "type": "keyword"
+          },
+          "resumed": {
+            "type": "boolean"
+          },
+          "server": {
+            "properties": {
+              "hash": {
+                "properties": {
+                  "sha1": {
+                    "ignore_above": 1024,
+                    "type": "keyword"
+                  }
+                }
+              },
+              "issuer": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              },
+              "ja3s": {
+                "ignore_above": 1024,
+                "type": "keyword"
+              },
+              "subject": {
+                "ignore_above": 8000,
+                "fields": {
+                  "text": {
+                    "type": "text"
+                  }
+                },
+                "type": "keyword"
+              }
+            }
+          },
+          "version": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          },
+          "version_protocol": {
+            "ignore_above": 1024,
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}

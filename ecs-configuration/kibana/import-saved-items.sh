@@ -10,7 +10,7 @@ failed=0
 
 echo "Please be patient as we import 200+ custom dashboards, visualizations, and searches..."
 
-for item in index-pattern search visualization dashboard url map canvas-workpad canvas-element timelion; do
+for item in config index-pattern search visualization dashboard url map canvas-workpad canvas-element timelion; do
   cd ${item} 2>/dev/null || continue
 
   for id in $(cat index.json | jq -r '.[]'); do
@@ -29,7 +29,7 @@ for item in index-pattern search visualization dashboard url map canvas-workpad 
         created=$((created+1))
       else
         failed=$((failed+1))
-        echo -e "Failed creating ${file}: \n ${response}\n"
+        echo -e "Failed creating ${item} named ${file}: \n ${response}\n"
       fi
     else
       # object already exists, apply update
@@ -45,7 +45,7 @@ for item in index-pattern search visualization dashboard url map canvas-workpad 
         updated=$((updated+1))
       else
         failed=$((failed+1))
-        echo -e "Failed updating ${file}: \n ${response}\n"
+        echo -e "Failed updating ${item} named ${file}: \n ${response}\n"
       fi
 
     fi

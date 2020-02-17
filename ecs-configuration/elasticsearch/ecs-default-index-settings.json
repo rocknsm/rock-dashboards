@@ -1,9 +1,9 @@
 {
-  "order": 0,
+  "order": 10,
   "index_patterns": [
     "ecs-*"
   ],
-  "version": 2019070701,
+  "version": 2020011401,
   "settings": {
     "index": {
       "mapping": {
@@ -58,6 +58,5 @@
         }
       }
     ]
-  },
-  "aliases": {}
+  }
 }
