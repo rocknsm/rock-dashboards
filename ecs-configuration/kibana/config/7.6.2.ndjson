@@ -1,0 +1,2 @@
+{"attributes":{"buildNum":29199,"defaultIndex":"ecs-all","siem:defaultIndex":["auditbeat-*","filebeat-*","packetbeat-*","winlogbeat-*","ecs-*"],"state:storeInSessionStorage":true,"theme:darkMode":true},"id":"7.6.2","references":[],"type":"config","updated_at":"2020-04-22T00:44:25.651Z","version":"WzM3MiwxXQ=="}
+{"exportedCount":1,"missingRefCount":0,"missingReferences":[]}
