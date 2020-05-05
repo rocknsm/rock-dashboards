@@ -1,11 +1,7 @@
--n [
--n "indexme-all"
--n , 
--n "parse-failures-all"
--n , 
--n "ecs-all"
--n , 
--n "ecs-suricata-all"
--n , 
--n "ecs-zeek-all"
--n ]
+[
+  "ecs-all",
+  "ecs-suricata-all",
+  "ecs-zeek-all",
+  "indexme-all",
+  "parse-failures-all"
+]
