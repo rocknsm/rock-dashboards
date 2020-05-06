@@ -281,8 +281,6 @@
   "ssl-issuer",
   "ssl-responding-port",
   "ssl-server-name",
-  "ssl-subject",
-  "ssl-version",
   "stat-files-seen",
   "stat-packet-lag",
   "stats-average-tcp-conn",
@@ -295,5 +293,7 @@
   "suricata-alert-categories",
   "suricata-alerts",
   "suricata-severity-over-time",
-  "table-of-contents"
+  "table-of-contents",
+  "tls.server.subject",
+  "tls.version"
 ]

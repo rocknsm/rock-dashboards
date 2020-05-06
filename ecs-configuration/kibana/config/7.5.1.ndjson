@@ -1,2 +1,2 @@
-{"attributes":{"buildNum":27610,"defaultIndex":"ecs-all","siem:defaultIndex":["auditbeat-*","filebeat-*","packetbeat-*","winlogbeat-*","ecs-*"],"state:storeInSessionStorage":true,"theme:darkMode":true},"id":"7.5.1","references":[],"type":"config","updated_at":"2020-01-13T16:09:42.094Z","version":"WzM4MSw2XQ=="}
+{"attributes":{"buildNum":27610,"defaultIndex":"ecs-all","siem:defaultIndex":["auditbeat-*","filebeat-*","packetbeat-*","winlogbeat-*","ecs-*"],"state:storeInSessionStorage":true,"theme:darkMode":true},"id":"7.5.1","references":[],"type":"config","updated_at":"2020-05-05T21:50:25.579Z","version":"WzIsMV0="}
 {"exportedCount":1,"missingRefCount":0,"missingReferences":[]}
