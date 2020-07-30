@@ -36,13 +36,14 @@
             "type": "keyword"
           },
           "client": {
-            "ignore_above": 8000,
-            "fields": {
-              "text": {
+            "properties": {
+              "version": {
+                "type": "text"
+              },
+              "software": {
                 "type": "text"
               }
-            },
-            "type": "keyword"
+            }
           },
           "compression_algorithm": {
             "ignore_above": 2048,
