@@ -8,7 +8,8 @@ PROTO_MAP = {
   'icmp' => 1,
   'tcp' => 6,
   'udp' => 17,
-  'icmp6' => 58
+  'icmp6' => 58,
+  'sctp' => 132
 }
 
 ICMP4_MAP = {
@@ -168,7 +169,6 @@ def filter(event)
       comm_id = VERSION + hash.hexdigest
   end
 
-
   event.set("#{@target_field}", comm_id)
 
   return [event]
@@ -188,10 +188,22 @@ test "when proto is udpv4" do
   expect("the hash is computed") {|events| events.first.get("community_id") == "1:d/FP5EW3wiY1vCndhwleRRKHowQ=" }
 end
 
-test "when proto is IPv6" do
+test "when proto is ipv6" do
   parameters {{"source_ip_field" => "src_ip", "dest_ip_field" => "dst_ip", "source_port_field" => "src_port", "dest_port_field" => "dst_port", "protocol_field" => "protocol", "target_field" => "community_id" }}
   in_event {{ "dst_ip" => "2607:f8b0:400c:c03::1a", "src_ip" => "2001:470:e5bf:dead:4957:2174:e82c:4887", "dst_port" => 25, "src_port" => 63943, "protocol" => "tcp" }}
   expect("the hash is computed") {|events| events.first.get("community_id") == "1:/qFaeAR+gFe1KYjMzVDsMv+wgU4=" }
+end
+
+test "when proto is sctp" do
+  parameters {{"source_ip_field" => "src_ip", "dest_ip_field" => "dst_ip", "source_port_field" => "src_port", "dest_port_field" => "dst_port", "protocol_field" => "protocol", "target_field" => "community_id" }}
+  in_event {{ "dst_ip" => "192.168.170.56", "src_ip" => "192.168.170.8", "dst_port" => 80, "src_port" => 7, "protocol" => "sctp" }}
+  expect("the hash is computed") {|events| events.first.get("community_id") == "1:jQgCxbku+pNGw8WPbEc/TS/uTpQ=" }
+end
+
+test "when proto is sctp reverse" do
+  parameters {{"source_ip_field" => "src_ip", "dest_ip_field" => "dst_ip", "source_port_field" => "src_port", "dest_port_field" => "dst_port", "protocol_field" => "protocol", "target_field" => "community_id" }}
+  in_event {{ "src_ip" => "192.168.170.56", "dst_ip" => "192.168.170.8", "src_port" => 80, "dst_port" => 7, "protocol" => "sctp" }}
+  expect("the hash is computed") {|events| events.first.get("community_id") == "1:jQgCxbku+pNGw8WPbEc/TS/uTpQ=" }
 end
 
 test "when proto is icmpv4" do
