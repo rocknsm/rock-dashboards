@@ -37,8 +37,16 @@
                 "type": "keyword"
               },
               "ja3": {
-                "ignore_above": 1024,
-                "type": "keyword"
+                "properties": {
+                  "hash": { 
+                    "ignore_above": 8000,
+                    "type": "keyword"
+                  },
+                  "string" : {
+                    "ignore_above": 1024,
+                    "type": "keyword"
+                  }
+                }
               },
               "server_name": {
                 "ignore_above": 8000,
@@ -98,8 +106,16 @@
                 "type": "keyword"
               },
               "ja3s": {
-                "ignore_above": 1024,
-                "type": "keyword"
+                "properties": {
+                  "hash": {
+                    "ignore_above": 8000,
+                    "type": "keyword"
+                  },
+                  "string": {
+                    "ignore_above": 8000,
+                    "type": "keyword"
+                  }
+                }
               },
               "subject": {
                 "ignore_above": 8000,
